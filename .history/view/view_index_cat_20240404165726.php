@@ -26,7 +26,7 @@ if ($Currentpage == "index.php") {
 
     // Récupération des catégories et affichage
     $index_page = get_index_page($conn);
-    echo "<h1 class='row d-flex position-relative mt-80'>BEST-SELLERS</h1>
+    echo "<h1>BEST-SELLERS</h1>
           <div  class='ul'>";
     foreach ($index_page as $categorie) {
      echo "<div class='li '>" ;

@@ -26,7 +26,7 @@ if ($Currentpage == "index.php") {
 
     // Récupération des catégories et affichage
     $index_page = get_index_page($conn);
-    echo "<h1 class='row d-flex position-relative mt-80'>BEST-SELLERS</h1>
+    echo "<h1>BEST-SELLERS</h1>
           <div  class='ul'>";
     foreach ($index_page as $categorie) {
      echo "<div class='li '>" ;
@@ -37,7 +37,7 @@ if ($Currentpage == "index.php") {
 
     // Récupération et affichage des plats les plus vendus
     $plats_index = get_plat_index($conn);
-    echo "<h1 class='row d-flex position-relative mt-80'>Nos clients en raffolent !!</h1>
+    echo "<h1 class='row d-flex position-relative top-80'>Nos clients en raffolent !!</h1>
           <div class='card-plat mt-80 justify-content-between  position-relative'>";
     foreach ($plats_index as $plat) {
         echo "<div  class='justify-content-around'>";
