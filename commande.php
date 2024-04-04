@@ -3,12 +3,15 @@ $array_plat = array("plat.php");
 $array_cat_plat = array("plat_cat.php");
 
 
-require_once('header.php');
 
-?>
 
-<?php 
+$Currentpage = basename($_SERVER['PHP_SELF']);
 
+$conn = new PDO("mysql:host=localhost;dbname=the_district", 'admin', 'Afpa1234');
+$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+// Inclusion du fichier DAO pour accéder à la base de données
+require_once('DAO.php');
 // We need to use sessions, so you should always start sessions using the below code.
 session_start();
 // If the user is not logged in redirect to the login page...
@@ -17,6 +20,8 @@ if (!isset($_SESSION['loggedin'])) {
     exit;
 }
 
+
+require_once('header.php');
 
 ?>
 
@@ -64,12 +69,11 @@ require_once('view/view_plat_page.php');
             <button type="submit" class="btn btn-danger">Valider la commande</button>
         </form>
     </div>
+</section>
 
-    </section>
 </main>
- </div>
 
-    <?php
+<?php
 
 require_once('footer.php');
 

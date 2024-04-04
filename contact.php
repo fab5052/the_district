@@ -49,7 +49,7 @@ if (isset($_POST['email'], $_POST['subject'], $_POST['name'], $_POST['msg'])) {
 
 <main class="main-content h-100 top-40">
 
-<h1 class="mt-md-8">
+<h1 class="mt-8">
   <i class="neon-red">Formulaire</i>
   <i class="neon-blue">Contact</i>
 </h1>
@@ -60,7 +60,7 @@ if (isset($_POST['email'], $_POST['subject'], $_POST['name'], $_POST['msg'])) {
 
 <div class="container-fluid col-4 justify-content-center  position-relative mx-auto top-40">
 
-<form class="contact mx-auto " method="post" action="mailing/reception_contact.php">
+<form class="contact" method="post" action="mailing/reception_contact.php">
 			<h1>Contact Form</h1>
 			<div class="fields">
 				<label for="email">

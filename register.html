@@ -22,11 +22,12 @@
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
-  <script src="tarteaucitron/tarteaucitron.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="tarteaucitron/css/tarteaucitron.css">
+  <link rel="tarteaucitron/css/tarteaucitron.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+
   <link rel="stylesheet" href="assets/css/style.css">
-
-
+  <!-- <link rel="stylesheet" href="assets/css/camera.css"> -->
 
 
 </head>
@@ -38,73 +39,47 @@
 
 <nav >
     
-<a href="home.php" class="nav-icon justify-content-center" aria-label="homepage" aria-current="page">
-        <span ><img  class="Logo justify-content-center position-relative" src="assets/img/images_the_district/the_district_brand/logo_transparent.png"></img>
-    
-          </a>
+<a href="index.php" class="nav-icon justify-content-center" aria-label="homepage" aria-current="page">
+        <span ><img  class="Logo justify-content-center position-relative" src="assets/img/images_the_district/the_district_brand/logo_transparent.png"></img></a>
     
           <div class="main-navlinks">
-            <bouton type="button" class="toggle m-5" aria-label="Toggle Navigation" aria-expanded="false">
+            <bouton type="button" class=" toggle m-5" aria-label="Toggle Navigation" aria-expanded="false">
               <span></span>
               <span></span>
               <span></span>
-    
-              </button>
-    
-    
-    
+           </button>
           </div>
-          <div class="navlinks-container col-md-6 d-flex justify-items-center">
-    
-   
 
-        <a class="nav-link " href="home.php" aria-current="page">Accueil</a>
+<div class="navlinks-container col-md-6 d-flex justify-items-center">    
+        <a class="nav-link " href="index.php">Accueil</a>
         <a class="nav-link" href="categorie.php">Catégories</a>
         <a class="nav-link" href="plat.php">Plats</a>
         <a class="nav-link" href="contact.php">Contact</a>
-
       </div>
+   
+ <div class="nav-authentication col-md-4 my-auto mx-auto m-3 d-flex justify-content-evenly align-items-center vertical-align-center"> 
+            <a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
+            <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>   
+            <a href="#"> <i class="fa fa-shopping-cart red "></i> <span class="badge badge-red">0</span></a>
+             
+ <div id="search">
+  <form id="search"  method="post" accept-charset="utf-8">
+  <input type="text" name="searchTerm" class="input" placeholder="Search" />
+  <button type="reset" class="search " id="search-button"> 
+  </form>
+  </button>
+ </div>
 
-    
-      <div class="nav-authentication col-md-2 my-auto m-0 d-flex align-items-center vertical-align-center">
-    <div class="shopping " >
-          <a href="#"> <i class="fa fa-shopping-cart red "></i> <span class="badge badge-red">0</span></a>
-           
-    </div>
- 
-         <div class="sign-btns d-block">    <a href="register.html"> 
-    
-          <i class="fa fa-sign-in" aria-hidden="true"></i></a> 
-            </div>
-  
-    
+  </div>
+     
+ </nav>
 
-
-
-            
-
-                <form action="results.php" method="post"accept-charset="utf-8">
-              <input type="text" name="input" class="input" placeholder="Search" />
-              <button type="reset" class="search " id="search-button"> 
-              </form>
-              </button>
-            </div>
-            </div>
-        
-    
-          </div>
-
- 
-
-      
-    </nav>
- 
-    </header>
+</header>
 
 	
 	<div class="parallax">
 
-		<div class="main-content m-none pt-4  ">
+		<div class="main-content  ">
 	
 	
 	
@@ -113,8 +88,8 @@
 			<i class="neon-blue">District</i>
 		  </h1>
 	
-		<div class="register">
-			<h1>Register</h1>
+		<div class="reg">
+			<h1>Enregistrez-vous</h1>
 			<form action="register.php" method="post" autocomplete="off">
 				<label for="username">
 					<i class="fas fa-user"></i>

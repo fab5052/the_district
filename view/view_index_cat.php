@@ -1,13 +1,10 @@
 <?php
 
-$array_cat_plat = array("plat_cat.php");
 
 $Currentpage = basename($_SERVER['PHP_SELF']);
 
 $conn = new PDO("mysql:host=localhost;dbname=the_district", 'admin', 'Afpa1234');
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-// Inclusion du script DAO pour les
 
 // Inclusion du fichier DAO pour accéder à la base de données
 require_once('DAO.php');
@@ -21,10 +18,7 @@ if (isset($_SERVER['QUERY_STRING']) && $_SERVER['QUERY_STRING'] != "") {
 
 // Si la page actuelle est l'index, affichage des catégories et des plats les plus vendus
 if ($Currentpage == "index.php") {
-    // Création d'une instance de ImageManager
-   
-
-    // Récupération des catégories et affichage
+      // Récupération des catégories et affichage
     $index_page = get_index_page($conn);
     echo "<h1 class='row d-flex position-relative mt-80'>BEST-SELLERS</h1>
           <div  class='ul'>";

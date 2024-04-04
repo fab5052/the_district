@@ -40,61 +40,38 @@
 <nav >
     
 <a href="index.php" class="nav-icon justify-content-center" aria-label="homepage" aria-current="page">
-        <span ><img  class="Logo justify-content-center position-relative" src="assets/img/images_the_district/the_district_brand/logo_transparent.png"></img>
-    
-          </a>
+        <span ><img  class="Logo justify-content-center position-relative" src="assets/img/images_the_district/the_district_brand/logo_transparent.png"></img></a>
     
           <div class="main-navlinks">
             <bouton type="button" class=" toggle m-5" aria-label="Toggle Navigation" aria-expanded="false">
               <span></span>
               <span></span>
               <span></span>
-    
-              </button>
+           </button>
           </div>
 
-
-
-<div class="navlinks-container col-md-6 d-flex justify-items-center">
-    
-           <a class="nav-link " href="index.php" aria-current="page">Accueil</a>
+<div class="navlinks-container col-md-6 d-flex justify-items-center">    
+        <a class="nav-link " href="index.php">Accueil</a>
         <a class="nav-link" href="categorie.php">Catégories</a>
         <a class="nav-link" href="plat.php">Plats</a>
         <a class="nav-link" href="contact.php">Contact</a>
-
       </div>
-
-    
-<div class="nav-authentication col-md-4 my-auto mx-auto m-3 d-flex justify-content-evenly align-items-center vertical-align-center">
-
- 
-
-         
+   
+ <div class="nav-authentication col-md-4 my-auto mx-auto m-3 d-flex justify-content-evenly align-items-center vertical-align-center"> 
             <a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
-            <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
-   
-        
+            <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>   
+            <a href="#"> <i class="fa fa-shopping-cart red "></i> <span class="badge badge-red">0</span></a>
+             
+ <div id="search">
+  <form id="search"  method="post" accept-charset="utf-8">
+  <input type="text" name="searchTerm" class="input" placeholder="Search" />
+  <button type="reset" class="search " id="search-button"> 
+  </form>
+  </button>
+ </div>
 
-   
-          <a href="#"> <i class="fa fa-shopping-cart red "></i> <span class="badge badge-red">0</span></a>
-         
-         
-      
-            <div id="search">
-                <form id="search"  method="post" accept-charset="utf-8">
-              <input type="text" name="searchTerm" class="input" placeholder="Search" />
-              <button type="reset" class="search " id="search-button"> 
-              </form>
-              </button>
-           
-              </div>
-            
-           
-          </div>
+  </div>
+     
+ </nav>
 
- 
-
-      
-    </nav>
- 
-    </header>
+</header>

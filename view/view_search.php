@@ -21,7 +21,7 @@ foreach($plats as $plat) {
     echo"<div class='card'>
     <h3>Plats :</h3>;
     <p>$plat->libelle</p>
-    <img class=' col-4  justify-content-center d_flex mx-auto' src ='$plat->image'>
+    <img class='img-fluid col-4  justify-content-center d_flex mx-auto' src ='$plat->image'>
     </div>";
 }
 

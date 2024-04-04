@@ -11,7 +11,7 @@ $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 // Inclusion du script DAO pour les requêtes
 
 
-require_once('DAO.php');
+require_once('./DAO.php');
 
 
 $plat_page->execute();
