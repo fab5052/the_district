@@ -25,8 +25,8 @@
   <script src="tarteaucitron/tarteaucitron.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
 
-  <link rel="stylesheet" href="assets/css/style.css">
-  <!-- <link rel="stylesheet" href="assets/css/camera.css"> -->
+  <link rel="stylesheet" href="assets/css/nav.css">
+  <link rel="stylesheet" href="assets/css/camera.css">
 
 
 </head>
@@ -80,8 +80,8 @@
          
       
             <div id="search">
-                <form id="search"  method="post" accept-charset="utf-8">
-              <input type="text" name="searchTerm" class="input" placeholder="Search" />
+                <form id="search" action="search" method="post" accept-charset="utf-8">
+              <input type="text" name="input" class="input" placeholder="Search" />
               <button type="reset" class="search " id="search-button"> 
               </form>
               </button>

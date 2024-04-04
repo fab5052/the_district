@@ -27,9 +27,9 @@ if ($Currentpage == "index.php") {
     // Récupération des catégories et affichage
     $index_page = get_index_page($conn);
     echo "<h1>BEST-SELLERS</h1>
-          <div  class='card-index'>";
+          <div  class='camera_wrap w-100 h-60 >";
     foreach ($index_page as $categorie) {
-     echo "<div class=row mx-auto>" ;
+     echo "<div id='=camera_wrap_3'>" ;
         $categorie->afficher_index_page();
         echo "<br>" . "</div>";
     }
@@ -52,7 +52,7 @@ if ($Currentpage == "categorie.php")  {
   $categories = get_cat_page($conn);
   echo "<div class='accordion-group'>";
   foreach ($categories as $categorie) {
-  echo "<li class='row mx-auto ' >";
+  echo "<li class='mx-auto ' >";
   $categorie->afficher_cat_page();
   echo "</li>";
   }

@@ -5,7 +5,6 @@
 // Récupérer le terme de recherche de l'utilisateur
 $searchTerm = $_GET['searchTerm'];
 
-var_dump($searchTerm);
 // Requête SQL pour rechercher dans les plats
 $sqlPlats = $conn->prepare("SELECT * FROM plat WHERE libelle LIKE '%$searchTerm%' OR description LIKE '%$searchTerm%'");
 $sqlPlats->execute();

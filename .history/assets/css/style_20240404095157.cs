@@ -77,7 +77,7 @@ hr {
   margin-bottom: 20vh;
   /* Marge en bas pour éviter le chevauchement avec le footer */
  
- min-height: 65vh;
+ 
 
 
 }

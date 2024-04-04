@@ -4,7 +4,7 @@
   <p class=" pull-right "><a href="#">Revenir en haut ▲</a></p>
  
     <div class="row">
-<div class="container-fluid top-100 h-25">
+<div class="container-fluid top-100  ">
 
 
 
@@ -42,9 +42,9 @@
         </ul>
      
 
+      <p class="pul-left ">@ 2017-2024 &middot;<a href="#">Tous droits &middot;</a><a href="#"> réservés</a></p>
     </div>
-    <p class="pull-left ">@ 2017-2024 &middot;<a href="#">Tous droits &middot;</a><a href="#"> réservés</a></p>
-
+ 
     </div>
 </footer>
 
@@ -87,27 +87,7 @@
 <script src='//cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.0/handlebars.min.js'></script><script src="assets/js/accordion.js"></script>
 <script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
 
-<!--<script src="assets/js/slider.js"></script>
-<script src="assets/js/jquery.js"></script>
 
-
-<script src="assets/js/bootstrap-tooltip.js"></script>
-
-
-<script src="assets/js/bootstrap-carousel.js"></script>
-
-<script src="assets/js/jquery.easing.1.3.js"></script>
-<script src='assets/js/camera.min.js'></script>
-<script>
-  jQuery(function() {
-
-    jQuery('#camera_wrap_1').camera({
-      thumbnails: true
-    });
-
-
-  });
-</script>-->
 
 </body>
 

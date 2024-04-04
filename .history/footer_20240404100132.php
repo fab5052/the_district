@@ -4,7 +4,7 @@
   <p class=" pull-right "><a href="#">Revenir en haut ▲</a></p>
  
     <div class="row">
-<div class="container-fluid top-100 h-25">
+<div class="container-fluid top-100  ">
 
 
 
@@ -42,9 +42,9 @@
         </ul>
      
 
+      <p class="pul-left ">@ 2017-2024 &middot;<a href="#">Tous droits &middot;</a><a href="#"> réservés</a></p>
     </div>
-    <p class="pull-left ">@ 2017-2024 &middot;<a href="#">Tous droits &middot;</a><a href="#"> réservés</a></p>
-
+ 
     </div>
 </footer>
 
