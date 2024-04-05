@@ -32,9 +32,9 @@ if ($Currentpage == "index.php") {
     // Récupération et affichage des plats les plus vendus
     $plats_index = get_plat_index($conn);
     echo "<h2 class='d-flex position-relative justify-content-center mt-4 pt-4'>Nos clients en raffolent !!</h2>
-          <div class='container-fluid ml-4 p-0 '>";
+          <div class='container-fluid  row card-index col-8'>";
     foreach ($plats_index as $plat) {
-        echo "<div  class='card-index col-md-4 mx-auto justify-content-center justify-align-items-center  position-relative '>";
+        echo "<div  class=' col-md-6 m-0  my-auto justify-content-center position-relative '>";
         $plat->afficher_plat_index();
         echo "<br>" . "</div>";
     }
@@ -46,7 +46,7 @@ if ($Currentpage == "categorie.php")  {
   $categories = get_cat_page($conn);
   echo "<div class='accordion-group'>";
   foreach ($categories as $categorie) {
-  echo "<li class='card-index row mx-auto ' >";
+  echo "<li class='row mx-auto ' >";
   $categorie->afficher_cat_page();
   echo "</li>";
   }

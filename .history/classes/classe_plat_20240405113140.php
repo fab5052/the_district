@@ -73,7 +73,7 @@ public function getLibelle() {
 
     public function afficher_plat_index() {
         echo "<h3>". $this->getLibelle() ."</h3>
-        <div>
+        <div class='col-md-6 '>
         <a href='commande.php?id=".$this->getId()."'>
         <img class='img-fluid ' src ='" . $this->getImage() . "'>
         </a>
@@ -82,12 +82,12 @@ public function getLibelle() {
 
     public function afficher_plat_view() {
         $categorie = get_categorie($this->getIdCategorie())[0];
-        echo "<div>
+        echo "<div class='card-plat col-md-6'>
         <img class=' img-fluid' src ='".$this->getImage()."' alt='Image de ".$this->getLibelle()."'>
-        <div class= class='card-plat '>
+        <div class='content'>
             <h2 class='card-title'>".$categorie->getLibelle()." / ".$this->getLibelle()."</h2>
             <p class='card-text'>".$this->getDescription()."</p>
-            <h5 class='card-subtitle mb-2'>Prix: ".$this->getPrix()."</h5>
+            <h6 class='card-subtitle mb-2'>Prix: ".$this->getPrix()."</h6>
             <a href='commande.php?id=".$this->getId()."' class='btn btn-danger btn-sm'>Commander</a>
         </div>
       </div>";

@@ -4,7 +4,7 @@
   <p class=" pull-right "><a href="#">Revenir en haut ▲</a></p>
  
  
-<div class="container-fluid bottom-0 h-20 my-auto">
+<div class="container-fluid  h-20 my-auto">
 
 <div class="row">
 

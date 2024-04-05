@@ -56,7 +56,7 @@ require_once('header.php');
         </h1>
 
     
-
+</div>
 
 <?php
 require_once('view/view_plat_page.php');

@@ -87,7 +87,7 @@ public function getLibelle() {
         <div class= class='card-plat '>
             <h2 class='card-title'>".$categorie->getLibelle()." / ".$this->getLibelle()."</h2>
             <p class='card-text'>".$this->getDescription()."</p>
-            <h5 class='card-subtitle mb-2'>Prix: ".$this->getPrix()."</h5>
+            <h6 class='card-subtitle mb-2'>Prix: ".$this->getPrix()."</h6>
             <a href='commande.php?id=".$this->getId()."' class='btn btn-danger btn-sm'>Commander</a>
         </div>
       </div>";

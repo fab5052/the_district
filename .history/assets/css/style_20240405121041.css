@@ -1,11 +1,7 @@
 @charset "utf-8";
 
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 
 
 h1{
@@ -56,7 +52,12 @@ h6{
 }
 
 
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
 
 hr {
   height: 0;
@@ -73,8 +74,8 @@ hr {
   margin-bottom: 10vh;
   /* Marge en bas pour éviter le chevauchement avec le footer */
  
-
- padding: 0;
+ min-height: 65vw;
+ z-index: 1;
 
 
 }
@@ -110,8 +111,8 @@ header {
 
 /* CSS pour le footer */
 footer {
-
- bottom: 0;
+  margin-top: 80vh;
+position: relative;
   width: 100%;
   height: 20vh;
   z-index: 500;
@@ -119,6 +120,10 @@ footer {
   background-color: #726b6bf6;
 ;
 
+}
+
+.text-center .h2 {
+  width: 100%;
 }
 
 nav {
@@ -167,20 +172,22 @@ a {
   object-fit: cover;
 
 
-  width: 30vw;
+  width: 30vh;
   height: 30vw;
-
+  margin-top: 10%;
   overflow: hidden;
-
+  z-index: 0;
 }
 
 .card-index .img {
  
   object-fit: cover;
-  height: 30vw;
-  max-height: 30vw;
-  min-height: 30vw ;
+  height: auto;
+  max-height: 20vh ;
 
+
+  z-index: 100;
+  display: inherit;
   overflow: hidden;
   object-fit: cover;
   
@@ -192,13 +199,13 @@ a {
   background-image: linear-gradient(45sdeg, #0f45677e 0%, #2a697388 80%);
   display: block;
   object-fit: cover;
-  justify-content: space-between;
+  justify-content: space-around;
 
-  width: 30vw;
-  height: 25vw;
-  margin-bottom: 10vh;
+  width: 35vh;
+  height: 20vw;
+  margin-bottom: 30vh;
   overflow: hidden;
- 
+  z-index: 0;
 }
 
 
@@ -215,10 +222,7 @@ a {
   
 }
 
-.img-fluid {
-  height: 25vw;
-  width: 30vw;
-}
+
 
 
 
@@ -1541,3 +1545,17 @@ h1>i {
     margin-right: .75rem;
     margin-left: .75rem;
   }*/
+
+
+
+.featurette-divider {
+  margin: 0.5rem 0;
+  height: 2px;
+  /* Space out the Bootstrap <hr> more */
+}
+
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
+}

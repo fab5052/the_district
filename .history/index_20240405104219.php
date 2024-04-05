@@ -76,8 +76,9 @@ require_once('header.php');
 
         <div class="ul d-block ">
             <div class="li d-none ">
+        </div>
+        </div>
         
-            </div>
           
 <?php
 
@@ -86,8 +87,7 @@ require_once('view/view_index_cat.php');
 ?>
              
          
-             </div>
-       
+           
         
 
 

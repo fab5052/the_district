@@ -55,15 +55,15 @@ require_once('header.php');
             </script>
         </h1>
 
-    
-
+        </main>
+</div>
 
 <?php
 require_once('view/view_plat_page.php');
 ?>
 
 
-</main>
+
 
 <?php
 require_once('footer.php');

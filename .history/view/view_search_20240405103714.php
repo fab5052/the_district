@@ -1,17 +1,7 @@
 <?php
-function connect_database () {
-    try {
-        $conn = new PDO("mysql:host=localhost;dbname=the_district", "admin", "Afpa1234");
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        
-        return $conn;
-    } catch(PDOException $e) {
-        echo "Erreur de connexion à la base de données : " . $e->getMessage();
-    }
-}
-
-$conn = connect_database();
-
+// Connexion à la base de données
+$conn = new PDO("mysql:host=hostname;dbname=nom_de_la_base_de_donnees", 'utilisateur', 'mot_de_passe');
+$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 // Récupérer le terme de recherche de l'utilisateur
 if(isset($_GET['searchTerm'])) {

@@ -32,9 +32,9 @@ if ($Currentpage == "index.php") {
     // Récupération et affichage des plats les plus vendus
     $plats_index = get_plat_index($conn);
     echo "<h2 class='d-flex position-relative justify-content-center mt-4 pt-4'>Nos clients en raffolent !!</h2>
-          <div class='container-fluid ml-4 p-0 '>";
+          <div class='container-fluid mt-4 mb-2 m-0 p-0 '>";
     foreach ($plats_index as $plat) {
-        echo "<div  class='card-index col-md-4 mx-auto justify-content-center justify-align-items-center  position-relative '>";
+        echo "<div  class='card-index col-md-4 mx-auto justify-content-center position-relative '>";
         $plat->afficher_plat_index();
         echo "<br>" . "</div>";
     }
