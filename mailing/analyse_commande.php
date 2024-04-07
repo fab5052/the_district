@@ -29,21 +29,24 @@ if (!empty($errors)) {
     }
 } else {
     // Les données sont valides, vous pouvez faire ce que vous voulez avec elles
-
+    
     $username = $_POST['username'];
     $email = $_POST['email'];
     $address = $_POST['address'];
     $phone = $_POST['phone'];
-    $id = $_POST['id'];
    
-    $plat = get_plat($conn, $id)[0];
-
+   
+    $plat_commande = get_plat_commande($conn, $plat_id);
+    $id = $id->getId();
     $libelle = $plat->getLibelle();
-    $prix = $plat->getPrix();
+    $quantite = $quantité->getPrix();
+    $prix = $prix->getPrix();
+
+
 
 
     // Création du contenu à écrire dans le fichier
-    $content = " $username \n Votre adresse de livraison :\n $address\n Votre mode de contact: $phone\n\n Vous avez choisi :\n $libelle - $prix €\n ";
+    $content = " $username \n Votre adresse de livraison :\n $email\n Votre Email :\n  $address\n Votre mode de contact: $phone\n\n Vous avez choisi :\n $libelle - $prix €\n ";
 
     // Chemin du fichier où enregistrer les données du formulaire
     

@@ -16,7 +16,7 @@ try {
 
     // Destinataire
     $mail->setFrom('thedistrict@mail.com', 'Expediteur');
-    $mail->addAddress('destinataire@example.com', 'Destinataire');
+    $mail->addAddress('jimjag@gmail.com', 'Destinataire');
 
     // Contenu du message
     $mail->isHTML(true);

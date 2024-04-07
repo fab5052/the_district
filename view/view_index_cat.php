@@ -7,7 +7,7 @@ $conn = new PDO("mysql:host=localhost;dbname=the_district", 'admin', 'Afpa1234')
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 // Inclusion du fichier DAO pour accéder à la base de données
-require_once('DAO.php');
+require_once('./DAO.php');
 
 // Si des paramètres sont passés dans l'URL, afficher la page de recherche
 
@@ -20,7 +20,7 @@ if (isset($_SERVER['QUERY_STRING']) && $_SERVER['QUERY_STRING'] != "") {
 if ($Currentpage == "index.php") {
       // Récupération des catégories et affichage
     $index_page = get_index_page($conn);
-    echo "<h1 class='row d-flex position-relative mt-80'>BEST-SELLERS</h1>
+    echo "<h1 class='d-flex position-relative mt-80'>BEST-SELLERS</h1>
           <div  class='ul'>";
     foreach ($index_page as $categorie) {
      echo "<div class='li '>" ;
@@ -31,8 +31,8 @@ if ($Currentpage == "index.php") {
 
     // Récupération et affichage des plats les plus vendus
     $plats_index = get_plat_index($conn);
-    echo "<h1 class='row d-flex position-relative mt-80'>Nos clients en raffolent !!</h1>
-          <div class='card-plat mt-80 justify-content-between  position-relative'>";
+    echo "<h1 class=' d-flex justify-content-center position-relative mt-80'>Nos clients en raffolent !!</h1>
+          <div class='card-plat row mt-80 justify-content-between  position-relative'>";
     foreach ($plats_index as $plat) {
         echo "<div  class='justify-content-around'>";
         $plat->afficher_plat_index();
@@ -46,7 +46,7 @@ if ($Currentpage == "categorie.php")  {
   $categories = get_cat_page($conn);
   echo "<div class='accordion-group'>";
   foreach ($categories as $categorie) {
-  echo "<li class='row mx-auto ' >";
+  echo "<li >";
   $categorie->afficher_cat_page();
   echo "</li>";
   }

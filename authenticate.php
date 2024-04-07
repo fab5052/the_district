@@ -33,11 +33,11 @@ if ($stmt = $conn->prepare('SELECT id, password FROM accounts WHERE username = ?
 		if (password_verify($_POST['password'], $password)) {
 			// Verification success! User has logged-in!
 			// Create sessions, so we know the user is logged in, they basically act like cookies but remember the data on the server.
-			session_regenerate_id();
+		
 			$_SESSION['loggedin'] = TRUE;
 			$_SESSION['name'] = $_POST['username'];
 			$_SESSION['id'] = $id;
-			header('Location: ./index.php');
+			header('Location: ./commande.php');
 		} else {
 			// Incorrect password
 			echo 'Incorrect username and/or password!';

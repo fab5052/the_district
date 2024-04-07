@@ -1,4 +1,10 @@
 <?php
+use \PHPMailer\PHPMailer\PHPMailer;
+use \PHPMailer\PHPMailer\Exception;
+
+// Inclure la classe PHPMailer
+require_once 'vendor/autoload.php';
+
 session_start();
 
 $DATABASE_HOST = 'localhost';
@@ -9,7 +15,7 @@ $conn = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE
 if (mysqli_connect_errno()) {
 	exit('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
-// W
+
 
 
 // Now we check if the data was submitted, isset() function will check if the data exists.
@@ -47,37 +53,33 @@ if ($stmt = $conn->prepare('SELECT id, password FROM accounts WHERE username = ?
 	if ($stmt->num_rows > 0) {
 		// Username already exists
 		echo 'Username exists, please choose another!';
-		header('Location: ../register.php');
+		header('Location: ./register.html');
 	} else {
 
 // Username doesn't exists, insert new account   //if ($stmt = $con->prepare('INSERT INTO accounts (username, password, email, activation_code) VALUES (?, ?, ?, ?)')) {
-if ($stmt = $conn->prepare('INSERT INTO accounts (username, password, email) VALUES (?, ?, ?)')) {	
-	$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-	$stmt->bind_param('sss', $_POST['username'], $password, $_POST['email']);
-	// $uniqid = uniqid();
-   // $stmt->bind_param('ssss', $_POST['username'], $password, $_POST['email'], $uniqid);
+	if ($stmt = $conn->prepare('INSERT INTO accounts (username, password, email, activation_code) VALUES (?, ?, ?, ?)')) {	$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+	// $stmt->bind_param('sss', $_POST['username'], $password, $_POST['email']);
+	$uniqid = uniqid();
+   $stmt->bind_param('ssss', $_POST['username'], $password, $_POST['email'], $uniqid);
 	$stmt->execute();
-/*$from  = 'noreply@localhost';
+$from  = 'from@thedistrict.com';
+$replyTo = ('user1@example.com') . ('Mr user1');
 $subject = 'Account Activation Required';
-$headers = 'From: ' . $from . "\r\n" . 'Reply-To: ' . $from . "\r\n" . 'X-Mailer: PHP/' . phpversion() . "\r\n" . 'MIME-Version: 1.0' . "\r\n" . 'Content-Type: text/html; charset=UTF-8' . "\r\n";
+$headers = 'From: ' . $from . "\r\n" . 'Reply-To: ' . $from . "\r\n" . 'PHPMailer: PHP/' . phpversion() . "\r\n" . 'MIME-Version: 1.0' . "\r\n" . 'Content-Type: text/html; charset=UTF-8' . "\r\n";
 // Update the activation variable below
-$activate_link = 'http://localhost/the_district/activate.php?email=' . $_POST['email'] . '&code=' . $uniqid;
+$activate_link = 'reply@thedistrict.com/activate.php?email=' . $_POST['email'] . '&code=' . $uniqid;
 $message = '<p>Please click the following link to activate your account: <a href="' . $activate_link . '">' . $activate_link . '</a></p>';
 mail($_POST['email'], $subject, $message, $headers);
-echo 'Please check your email to activate your account!';*/
-
-	echo 'You have successfully registered! You can now login!';
-	header('Location: ../login.php');
-} else {
-	// Something is wrong with the SQL statement, so you must check to make sure your accounts table exists with all three fields.
-	echo 'Could not prepare statement!';
-
+echo 'Please check your email to activate your account!';
 }
-}
-$stmt->close();
-} else {
+
+
+
 // Something is wrong with the SQL statement, so you must check to make sure your accounts table exists with all 3 fields.
 echo 'Could not prepare statement!';
 }
 $conn->close();
+
+}
+?>
 

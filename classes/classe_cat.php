@@ -58,7 +58,7 @@ class Categorie {
     
 
     public function afficher_cat_page() {
-        echo "<h1>" . $this->getLibelle() . "</h1>
+        echo "<h2>" . $this->getLibelle() . "</h2>
         <div>
             <a href='plat_cat.php?id=" . $this->getId() . "'>
             <img class='img-fluid   ' src='" . $this->getImage() . "'>

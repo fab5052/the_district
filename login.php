@@ -40,7 +40,7 @@ require_once('header.php');
              
             
               </form>
-              <div class="reg my-auto d-flex justify-content-center ">
+              <div class="reg mx-auto d-flex justify-content-center align-items-center  ">
               <h5 >Vous n'avez pas de compte :</h5>
          <h4><a href="register.html"> Inscrivez-vous </a></h4>
           </div>

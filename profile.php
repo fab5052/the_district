@@ -50,7 +50,7 @@ $stmt->close();
 <div class="  container-fluid  col-md-6 d-block justify-content-center align-items-center mt-40">
 
 <h2>Nous sommes ravies de vous revoir !</h2>
-<p>Détails:</p>
+
 
     <fieldset>
     <table class="xe-uncaught-exception" dir="ltr" border="1" cellspacing="1" cellpadding="1">
@@ -87,34 +87,34 @@ $stmt->close();
 
 
 <?php
-// Vérifier si les détails de la commande sont disponibles dans la session //
-if(isset($_SESSION['details_commande'])) {
-  $details_commande = $_SESSION['details_commande'];
-  $user  = $_SESSION['profile'];
-  echo '<h1>Nous sommes content de vous revoir '. $user['username'] . '</h1>';
-  echo '<h4>Vos informations</h4>';
-  echo '<p>Utilisateur ' . $username['username'] . '</p>';
-  echo '<p>Email: ' . $user['email'] . '</p>';
+// // Vérifier si les détails de la commande sont disponibles dans la session //
+// if(isset($_SESSION['details_commande'])) {
+//   $details_commande = $_SESSION['details_commande'];
+//   $user  = $_SESSION['profile'];
+//   echo '<h1>Nous sommes content de vous revoir '. $user['username'] . '</h1>';
+//   echo '<h4>Vos informations</h4>';
+//   echo '<p>Utilisateur ' . $username['username'] . '</p>';
+//   echo '<p>Email: ' . $user['email'] . '</p>';
  
 
 
 
 
 
- echo '<p>Adresse: ' . $details_commande[0]['adresse_client'] . '</p>';
-  echo '<p>Téléphone: ' . $details_commande[0]['telephone_client'] . '</p>';
-  // Afficher les détails des plats
-  foreach($details_commande as $detail) {
-      echo '<h2> Vous avez passez commande le : '.$detail['date_commande'].'</h2>';
-      echo '<p> Vous avez commandé : '.$detail['libelle_plat']. " En Quantité :".$detail['quantite'].'</p>';
-     echo '<p> le total de la comande est de :' .$detail['total']. " €</p>";
-  }
-} else {
-  echo 'Aucun détail de commande trouvé.';
-}
+//  echo '<p>Adresse: ' . $details_commande[0]['adresse_client'] . '</p>';
+//   echo '<p>Téléphone: ' . $details_commande[0]['telephone_client'] . '</p>';
+//   // Afficher les détails des plats
+//   foreach($details_commande as $detail) {
+//       echo '<h2> Vous avez passez commande le : '.$detail['date_commande'].'</h2>';
+//       echo '<p> Vous avez commandé : '.$detail['libelle_plat']. " En Quantité :".$detail['quantite'].'</p>';
+//      echo '<p> le total de la comande est de :' .$detail['total']. " €</p>";
+//   }
+// } else {
+//   echo 'Aucun détail de commande trouvé.';
+// }
 
 
-?>
+// ?>
 
 
 

@@ -27,6 +27,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
 
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.less">
   <!-- <link rel="stylesheet" href="assets/css/camera.css"> -->
 
 
@@ -57,17 +58,19 @@
         <a class="nav-link" href="contact.php">Contact</a>
       </div>
    
- <div class="nav-authentication col-md-4 my-auto mx-auto m-3 d-flex justify-content-evenly align-items-center vertical-align-center"> 
+ <div class="nav-authentication col-md-4 my-auto mx-auto m-3 d-flex d-md-lock justify-content-evenly align-items-center vertical-align-middle"> 
             <a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
             <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>   
-            <a href="#"> <i class="fa fa-shopping-cart red "></i> <span class="badge badge-red">0</span></a>
-             
+            <a href="#"> <i class="fas fa-shopping-cart red "></i> <span class="badge badge-red">0</span></a>
+
+<?php if($_SERVER['PHP_SELF'] ):  ?>
  <div id="search">
-  <form id="search"  method="post" accept-charset="utf-8">
+  <form id="search"  method="get" accept-charset="utf-8">
   <input type="text" name="searchTerm" class="input" placeholder="Search" />
   <button type="reset" class="search " id="search-button"> 
-  </form>
   </button>
+  </form>
+  <?php endif; ?>
  </div>
 
   </div>

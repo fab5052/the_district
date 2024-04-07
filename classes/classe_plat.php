@@ -1,7 +1,5 @@
 <?php
 
-
-
 class Plat {
     private $id;    
     public $libelle;
@@ -24,7 +22,7 @@ class Plat {
     }
 
   // Méthodes pour obtenir et définir la propriété id
-    public function getId() {
+  public function getId() {
         return $this->id;
     }
 
@@ -33,11 +31,11 @@ class Plat {
             return $this;
     }
 
-
     public function getPlatId($plat_id) {
         $this->id = $plat_id;
             return $this;
     }
+
 
 
 // Méthodes pour obtenir et définir la propriété description
@@ -84,7 +82,7 @@ public function getLibelle() {
         $categorie = get_categorie($this->getIdCategorie())[0];
         echo "<div class='card-plat col-md-6'>
         <img class=' img-fluid' src ='".$this->getImage()."' alt='Image de ".$this->getLibelle()."'>
-        <div class='content'>
+        <div class='card-plat'>
             <h2 class='card-title'>".$categorie->getLibelle()." / ".$this->getLibelle()."</h2>
             <p class='card-text'>".$this->getDescription()."</p>
             <h6 class='card-subtitle mb-2'>Prix: ".$this->getPrix()."</h6>
@@ -107,12 +105,11 @@ public function getLibelle() {
 
 
    
-    
 
     public function afficher_plat_commande() {
         
         echo "<h6>". $this->getLibelle() ."</h6>
-        <div class='card mx-auto col-8 col-md-6'>
+        <div class='card-plat mx-auto col-8 col-md-6'>
         <img class='mx-auto img-fluid' src ='".$this->getImage()."'>
         <div class='card-body'>
         <p>".$this->getDescription()."</p>

@@ -1,15 +1,4 @@
 <?php
-// We need to use sessions, so you should always start sessions using the below code.
-session_start();
-// If the user is not logged in redirect to the login page...
-if (!isset($_SESSION['loggedin'])) {
-    header('Location: login.php');
-    exit;
-}
-
-
-?>
-<?php
 
 
 require_once('header.php');
@@ -27,12 +16,13 @@ require_once('header.php');
 
 
 
-    
+        <div class="glue-cookie-notification-bar" id="glue-cookie-notification-bar-1" aria-labelledby="glue-cookie-notification-bar-1-label" role="region" tabindex="-1" style="font-size: 1rem;">
+            <p class="glue-cookie-notification-bar__text"><span id="glue-cookie-notification-bar-1-label">www.google.com utilise des cookies Google afin de fournir ses services, d'en améliorer la qualité et d'analyser le trafic. </span><a href="https://policies.google.com/technologies/cookies?hl=fr" class="glue-cookie-notification-bar__more" rel="noopener" aria-describedby="glue-cookie-notification-bar-1-label" target="_blank" aria-label="En savoir plus sur la manière dont Google utilise les cookies (s'ouvre dans un autre onglet).">En savoir plus</a>.</p><button class="glue-cookie-notification-bar__accept">J'ai compris</button>
+        </div>
 
 
 
-
-         <div class="container">
+        <!-- <div class="container">
 
             <div class="camera_wrap camera_magenta_skin  w-100" id="camera_wrap_1">
                 <div data-thumb="assets/img/camera/slides/thumbs/bridge.jpg" data-src="assets/img/camera/slides/bridge.jpg">
@@ -65,30 +55,31 @@ require_once('header.php');
                     </div>
                 </div>
             </div>
-        </div> 
-        
+        </div>   -->
+
 
         <h1>
             <i class="neon-red">The</i>
             <i class="neon-blue">District</i>
         </h1>
 
+        <div class="container-fluid d-block justify-content-center">
+            <div class="ul d-none">
+                <div class="li ">
+                </div>
 
-        <div class="ul d-block position-absolute ">
-            <div class="li d-none ">
+            </div>
+
+            <?php
+
+            require_once('view/view_index_cat.php');
+
+            ?>
+
         </div>
-    
-        
-          
-<?php
 
-require_once('view/view_index_cat.php');
 
-?>
-              </div> 
-         
-           
-        
+
 
 
 
@@ -266,16 +257,16 @@ require_once('view/view_index_cat.php');
             </div>
         </div>
     </div> -->
-    <hr class="featurette-divider">
+        <hr class="featurette-divider">
 
 
-    </main>
+        </main>
+
+    </div>
 
 
+    <?php
 
+    require_once('footer.php');
 
-<?php
-
-require_once('footer.php');
-
-?>
+    ?>

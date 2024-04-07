@@ -14,3 +14,15 @@ function connect_database () {
         die("Fin du script");
     }
 }
+$plat_page->execute();
+$plats = $plat_page->fetchAll(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, "Plat");
+
+if (in_array($Currentpage, $array_plat)) {
+echo "<div class='col-8 mx-auto'>";
+foreach ($plats as $plat) {
+    echo "<div class='card-plat col-md-6 d-block position-relative  justify-content-around '>";
+    $plat->afficher_plat_page();
+     echo "<br>"."</div>";
+}
+echo "</div>";
+}
