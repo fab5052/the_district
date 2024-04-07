@@ -1,14 +1,5 @@
 <?php
-
-$array_plat = array("plat.php");
-
-?>
-
-
-<?php
-
 require_once('header.php');
-
 ?>
 
 <div class="parallax">
@@ -64,15 +55,15 @@ require_once('header.php');
             </script>
         </h1>
 
-    
-
+        </main>
+</div>
 
 <?php
 require_once('view/view_plat_page.php');
 ?>
 
 
-</main>
+
 
 <?php
 require_once('footer.php');

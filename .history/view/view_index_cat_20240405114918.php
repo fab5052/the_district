@@ -7,7 +7,7 @@ $conn = new PDO("mysql:host=localhost;dbname=the_district", 'admin', 'Afpa1234')
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 // Inclusion du fichier DAO pour accéder à la base de données
-require_once('./DAO.php');
+require_once('DAO.php');
 
 // Si des paramètres sont passés dans l'URL, afficher la page de recherche
 
@@ -20,13 +20,8 @@ if (isset($_SERVER['QUERY_STRING']) && $_SERVER['QUERY_STRING'] != "") {
 if ($Currentpage == "index.php") {
       // Récupération des catégories et affichage
     $index_page = get_index_page($conn);
-<<<<<<< HEAD
-    echo "<h1 class='d-flex position-relative mt-80'>BEST-SELLERS</h1>
-          <div  class='ul'>";
-=======
     echo "<h1 class='d-flex justify-content-center pt-8'>BEST-SELLERS</h1>
           <div  class='container-fluid ul d-flex w-80 mx-auto justify-content-center'>";
->>>>>>> f72408db5316723d5a105c72ecbd21c6c204ca31
     foreach ($index_page as $categorie) {
      echo "<div class='li '>" ;
         $categorie->afficher_index_page();
@@ -36,15 +31,10 @@ if ($Currentpage == "index.php") {
 
     // Récupération et affichage des plats les plus vendus
     $plats_index = get_plat_index($conn);
-<<<<<<< HEAD
-    echo "<h1 class=' d-flex justify-content-center position-relative mt-80'>Nos clients en raffolent !!</h1>
-          <div class='card-plat row mt-80 justify-content-between  position-relative'>";
-=======
     echo "<h2 class='d-flex position-relative justify-content-center mt-4 pt-4'>Nos clients en raffolent !!</h2>
-          <div class='container-fluid ml-4 p-0 '>";
->>>>>>> f72408db5316723d5a105c72ecbd21c6c204ca31
+          <div class='row card-index col-8'>";
     foreach ($plats_index as $plat) {
-        echo "<div  class='card-index col-md-4 mx-auto justify-content-center justify-align-items-center  position-relative '>";
+        echo "<div  class='container-fluid  col-md-6 m-0  my-auto justify-content-center position-relative '>";
         $plat->afficher_plat_index();
         echo "<br>" . "</div>";
     }
@@ -56,11 +46,7 @@ if ($Currentpage == "categorie.php")  {
   $categories = get_cat_page($conn);
   echo "<div class='accordion-group'>";
   foreach ($categories as $categorie) {
-<<<<<<< HEAD
-  echo "<li >";
-=======
-  echo "<li class='card-index row mx-auto ' >";
->>>>>>> f72408db5316723d5a105c72ecbd21c6c204ca31
+  echo "<li class='row mx-auto ' >";
   $categorie->afficher_cat_page();
   echo "</li>";
   }

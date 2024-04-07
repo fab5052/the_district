@@ -1,49 +1,52 @@
-<footer>
-
-<div  class="container-fluid text-muted d-sm-flex w-100 mx-auto my-auto top-100 ">
-
-<p class="text-left ">@ 2024 &middot;<a href="#">Tous droits &middot;</a><a href="#"> réservés</a></p>
-  
+<footer >
 
 
+  <p class=" pull-right "><a href="#">Revenir en haut ▲</a></p>
  
-<<<<<<< HEAD
-=======
  
-<div class="container-fluid bottom-0 h-20 my-auto">
+<div class="container-fluid mb-0 h-20 my-auto">
 
 <div class="row">
->>>>>>> f72408db5316723d5a105c72ecbd21c6c204ca31
 
 
-      <div class=" col-md-2 row">
-        <h3>A propos</h3>
-          <a href="#">Historique</a>
-          <a href="#">Service clients</a>
+      <div class="col-md-3">
+        <h3 class="h3">A propos</h3>
+        <ul class="footer-list">
+          <li><a href="#">Historique</a></li>
+          <li><a href="#">Service clients</a></li>
 
+        </ul>
       </div>
-      <div class="row col-md-2">
-        <h3>Partners</h3>
-          <a href="#">MIO</a>
-          <a href="#">AFPA</a>
+      <div class="col-md-3">
+        <h3 class="h3">Partners</h3>
+        <ul class="footer-list">
+
+          <li><a href="#">MIO</a></li>
+
+        </ul>
       </div>
-      <div class="row col-md-2">
-        <h3>Service clients</h3>
-          <a href="#">Chat</a>
-          <a href="#">03 22 453 352</a>
+      <div class="col-md-3">
+        <h3 class="h3">Service clents</h3>
+        <ul class="footer-list">
+          <li><a href="#">Chat</a></li>
+          <li><a href="#">03 22 453 352</a></li>
+
+        </ul>
       </div>
-      <div class="row col-md-2">
-        <h3>Socials</h3>
-      
-          <a href="#"><i class="fa fa-facebook"></i></a>
-          <a href="#"><i class="fa fa-instagram"></i></a>
-          <a href="#"><i class="fa fa-twitter"></i></a> 
+      <div class="col-md-3">
+        <h3 class="h3">Socials</h3>
+        <ul class="footer-list footer-list-inline">
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        </ul>
+     
 
     </div>
-    <p class="text-right "><a href="#">Revenir en haut ▲</a></p>
-    
+    <p class="pull-left ">@ 2017-2024 &middot;<a href="#">Tous droits &middot;</a><a href="#"> réservés</a></p>
 
     </div>
+</div>
 
 </footer>
 
@@ -54,17 +57,17 @@
 
 
 <!--
-<script src="https://cdnjs.cloudflare.com/ajax/bs/vue/2.1.7/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.7/vue.js"></script>
 <script src="https://wlada.github.io/vue-carousel-3d/js/carousel-3d.umd.js"></script>
 <script>
   new Vue({
   el: '#carousel3d', 
   data: {
-    sdes: 6
+    slides: 6
   },
   components: {
     'carousel-3d': window['carousel-3d'].Carousel3d,
-    'sde': window['carousel-3d'].Sde
+    'slide': window['carousel-3d'].Slide
   }
 })
   
@@ -72,17 +75,11 @@
 </script>-->
 <script src="assets/js/toggle.js"></script>
 
-<<<<<<< HEAD
-<!-- <script src="tarteaucitron/tarteaucitron.js"></script>
-
-<script type="text/javascript">
-=======
 <script src="tarteaucitron/tarteaucitron.js"></script>
 <!-- <script>
->>>>>>> f72408db5316723d5a105c72ecbd21c6c204ca31
 tarteaucitron.init({
-    "privacyUrl": "", /* Privacy pocy url */
-    "bodyPosition": "bottom", /* or top to bring it as first element for accessibity */
+    "privacyUrl": "", /* Privacy policy url */
+    "bodyPosition": "bottom", /* or top to bring it as first element for accessibility */
 
     "hashtag": "#tarteaucitron", /* Open the panel with this hashtag */
     "cookieName": "tarteaucitron", /* Cookie name */
@@ -90,11 +87,11 @@ tarteaucitron.init({
     "orientation": "middle", /* Banner position (top - bottom - middle - popup) */
 
     "groupServices": false, /* Group services by category */
-    "showDetailsOnCck": true, /* Cck to expand the description */
+    "showDetailsOnClick": true, /* Click to expand the description */
     "serviceDefaultState": "wait", /* Default state (true - wait - false) */
 
-    "showAlertSmall": true, /* Show the small banner on bottom right */
-    "cookiesst": false, /* Show the cookie st */
+    "showAlertSmall": false, /* Show the small banner on bottom right */
+    "cookieslist": false, /* Show the cookie list */
     
     "showIcon": true, /* Show cookie icon to manage cookies */
     // "iconSrc": "", /* Optional: URL or base64 encoded image */
@@ -108,31 +105,21 @@ tarteaucitron.init({
 
     "handleBrowserDNTRequest": false, /* If Do Not Track == 1, disallow all */
 
-    "removeCredit": false, /* Remove credit nk */
+    "removeCredit": false, /* Remove credit link */
     "moreInfoLink": true, /* Show more info link */
     "useExternalCss": false, /* If false, the tarteaucitron.css file will be loaded */
     "useExternalJs": false, /* If false, the tarteaucitron.services.js file will be loaded */
 
-    "cookieDomain": ".my-multisite-domaine.fr", /* Shared cookie for subdomain website */
+    // "cookieDomain": ".my-multisite-domaine.fr", /* Shared cookie for subdomain website */
 
     "readmoreLink": "", /* Change the default readmore link pointing to tarteaucitron.io */
     
     "mandatory": true, /* Show a message about mandatory cookies */
     "mandatoryCta": true, /* Show the disabled accept button when mandatory on */
     
-<<<<<<< HEAD
-  //"customCloserId": "", /* Optional a11y: Custom element ID used to open the panel */
-      
-    "googleConsentMode": true, /* Enable Google Consent Mode v2 for Google ads and GA4 */
-          
-    "partnersList": false,
-  });
-</script>  -->
-=======
     // "customCloserId": "" /* Optional a11y: Custom element ID used to open the panel */
 });
 </script> -->
->>>>>>> f72408db5316723d5a105c72ecbd21c6c204ca31
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -146,7 +133,7 @@ tarteaucitron.init({
 <script src='//cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.0/handlebars.min.js'></script><script src="assets/js/accordion.js"></script>
 <script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
 
-<script src="assets/js/slider.js"></script>
+<!--<script src="assets/js/slider.js"></script>
 <script src="assets/js/jquery.js"></script>
 
 
@@ -166,7 +153,7 @@ tarteaucitron.init({
 
 
   });
-</script>
+</script>-->
 
 </body>
 

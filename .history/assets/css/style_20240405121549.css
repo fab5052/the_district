@@ -1,19 +1,13 @@
 @charset "utf-8";
 
 
-<<<<<<< HEAD
-=======
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
->>>>>>> f72408db5316723d5a105c72ecbd21c6c204ca31
+
 
 h1{
 
 	font-weight: 500;
+	font-family:Georgia, "Times New Roman", Times, serif;
 	font-style:italic;
 	text-shadow:1px 1px 2px rgba(0, 0, 0, .3);
   position: relative;
@@ -23,45 +17,46 @@ h1{
 h2{
   font-size:2em;
 	line-height:1.2em;
+  margin:0 0 1em;
+	font-family:"Times New Roman", Times, serif;
 	font-style:italic;
 	font-weight:normal;
 	background:#3939391c;
 	color:#d87a28;
+	padding:.2em 0 .2em .5em;
 	border-radius:3px;
 }
 
-<<<<<<< HEAD
-	h2  {
-		color:#928e54;
 
-		}
-=======
-
->>>>>>> f72408db5316723d5a105c72ecbd21c6c204ca31
 h3{
   font-size:24px;
 	line-height:1.2em;
+	font-family:"Times New Roman", Times, serif;
 	font-weight:normal;
+  margin:0 0 .75em;
 }
 	h3 strong {
 		font-weight:normal
 	}
 h4{
   font-size:1em;
+  margin:0 0 .2em;
 }
 h5{
   font-size:0.8333em;
+  margin:0 0 1em;
 }
 h6{
   font-size:0.666em;
+  margin:0 0 2.25em;
 }
 
 
-
-
-body {
-  width: 100%;
-  height: 100%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
 }
 
 hr {
@@ -79,8 +74,8 @@ hr {
   margin-bottom: 10vh;
   /* Marge en bas pour éviter le chevauchement avec le footer */
  
-
- padding: 0;
+ min-height: 65vw;
+ z-index: 1;
 
 
 }
@@ -98,8 +93,7 @@ hr {
   /* Empêche l'image de se répéter en fonction de la taille d'écran */
   z-index: -10;
   overflow: hidden;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
 
 }
 
@@ -107,7 +101,7 @@ header {
   position: fixed;
 
   top: 0;
-  width: 100%;
+  width: 100vw;
 
   z-index: 1000;
   /
@@ -117,32 +111,25 @@ header {
 
 /* CSS pour le footer */
 footer {
-<<<<<<< HEAD
-  bottom: 0;
+  margin-top: 80vh;
 position: relative;
-=======
-
- bottom: 0;
->>>>>>> f72408db5316723d5a105c72ecbd21c6c204ca31
   width: 100%;
-  min-height: 20vh;
-
+  height: 20vh;
   z-index: 500;
   /* Assure que le footer reste au-dessus du contenu */
   background-color: #726b6bf6;
-  padding: none;
+;
 
 }
 
-<<<<<<< HEAD
+.text-center .h2 {
+  width: 100%;
+}
 
-
-=======
->>>>>>> f72408db5316723d5a105c72ecbd21c6c204ca31
 nav {
   display: flex;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   background-color: #6b6666f6;
   /* Couleur de fond du header */
   align-items: center;
@@ -158,7 +145,7 @@ nav {
 
 a {
   font-size: 20px;
-  color: #90a7d3ed;
+  color: #7c95c5;
   text-shadow: solid 4px #d9d9de;
 }
 
@@ -199,6 +186,9 @@ a {
   max-height: 30vw;
   min-height: 30vw ;
 
+
+
+  display: inherit;
   overflow: hidden;
   object-fit: cover;
   
@@ -210,10 +200,10 @@ a {
   background-image: linear-gradient(45sdeg, #0f45677e 0%, #2a697388 80%);
   display: block;
   object-fit: cover;
-  justify-content: space-between;
+  justify-content: space-around;
 
-  width: 30vw;
-  height: 25vw;
+  width: 35vh;
+  height: 20vw;
   margin-bottom: 10vh;
   overflow: hidden;
  
@@ -234,8 +224,7 @@ a {
 }
 
 .img-fluid {
-  height: 25vw;
-  width: 30vw;
+
 }
 
 
@@ -328,56 +317,6 @@ vertical-align: middle;
   	transition: background-color 0.2s;
 }
 
-.register {
-  width: 400px;
-  background-color: #ffffff;
-  box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
-  margin: 100px auto;
-}
-.register h1 {
-  text-align: center;
-  color: #5b6574;
-  font-size: 24px;
-  padding: 20px 0 20px 0;
-  border-bottom: 1px solid #dee0e4;
-}
-.register form {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-top: 20px;
-}
-.register form label {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
- height: 50px;
-  background-color: #3274d6;
-  color: #ffffff;
-}
-.register form input[type="password"], .register form input[type="text"], .register form input[type="email"] {
-  width: 310px;
-  height: 50px;
-  border: 1px solid #dee0e4;
-  margin-bottom: 20px;
-  padding: 0 15px;
-}
-.register form input[type="submit"] {
-  width: 100%;
-  padding: 15px;
-  margin-top: 20px;
-  background-color: #3274d6;
- border: 0;
-  cursor: pointer;
-  font-weight: bold;
-  color: #ffffff;
-  transition: background-color 0.2s;
-}
-.register form input[type="submit"]:hover {
-background-color: #2868c7;
-  transition: background-color 0.2s;
-}
 
 input,textarea,p {
   outline: 0;
@@ -1609,3 +1548,17 @@ h1>i {
     margin-right: .75rem;
     margin-left: .75rem;
   }*/
+
+
+
+.featurette-divider {
+  margin: 0.5rem 0;
+  height: 2px;
+  /* Space out the Bootstrap <hr> more */
+}
+
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
+}
