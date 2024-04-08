@@ -128,13 +128,13 @@ function get_plat_commande($conn, $plat_id) {
 
 function userConnecter()
 { 
-    if(!isset($_SESSION['membre'])) return false;
+    if(!isset($_SESSION['loggedin'])) return false;
     else return true;
 }
 //------------------------------------
 function userConnecterAdmin()
 {
-    if(userConnecterAdmin() && $_SESSION['membre']['statut'] == 1) return true;
+    if(userConnecterAdmin() && $_SESSION['loggedin']['statut'] == 1) return true;
     else return false;
 }
 //------------------------------------
@@ -143,8 +143,8 @@ function creationPanier()
    if(!isset($_SESSION['panier']))
    {
       $_SESSION['panier'] = array();
-      $_SESSION['panier']['titre'] = array();
-      $_SESSION['panier']['id_produit'] = array();
+      $_SESSION['panier']['libelle'] = array();
+      $_SESSION['panier']['id_plat'] = array();
       $_SESSION['panier']['quantite'] = array();
       $_SESSION['panier']['prix'] = array();
    }
@@ -167,35 +167,3 @@ function ajouterPlatPanier($id_plat, $libelle, $quantite, $prix)
     }
 }
 
-
-// // Requête pour obtenir les catégories actives à afficher sur la page d'index
-// $index_page = $conn->prepare("SELECT id, libelle, image, active
-// FROM categorie
-// WHERE active = 'Yes'
-// LIMIT 5");
-
-
-
-
-// // Requête pour obtenir toutes les catégories et leurs images
-// $cat_page = $conn->prepare("SELECT  id, libelle , image
-// FROM categorie 
-// ");
-
-// // Requête pour obtenir les plats qui ont été commandés plus de deux fois et qui n'ont pas été annulés
-// $plat_index = $conn->prepare("SELECT DISTINCT  p.*
-//  FROM categorie cat
-//  JOIN plat p ON p.id_categorie = cat.id
-//  JOIN commande com ON com.id_plat = p.id
-//  WHERE com.quantite > 2
-//  AND com.etat != 'Annulée'");
-
-
-// $plat_page =$conn->prepare("SELECT plat.*
-// FROM plat
-// JOIN categorie ON categorie.id = plat.id_categorie");
-
-
-// $cat_plat =$conn->prepare("SELECT *
-// FROM plat
-// WHERE id_categorie = :id_categorie");
