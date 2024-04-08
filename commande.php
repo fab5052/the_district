@@ -5,7 +5,14 @@ if ($account['activation_code'] == 'activated') {
 	// Display home page etc
 } else {
 	// account is not activated
-	
+	session_start(); 
+  
+ // Rediriger vers la page de connexion si l'utilisateur n'est pas connecté 
+ if (!isset($_SESSION['loggedin'])) { 
+     header('Location: login.php'); 
+     exit; 
+ } 
+ }
 
 if(!isset(session_use_strict_mode=On)); 
 $stmt = $pdo->prepare('SELECT * FROM accounts WHERE id = ?');
@@ -16,18 +23,7 @@ $plat_id = isset($_SESSION['panier']) ? $_SESSION['panier'] : null;
 
 require_once('view/view_plat_page.php');
 
-if (!isset($_SESSION['panier'])) {
-
- 
-
-session_start();
-
-// Rediriger vers la page de connexion si l'utilisateur n'est pas connecté
-if (!isset($_SESSION['loggedin'])) {
-    header('Location: login.php');
-    exit;
-}
-}
+if (!isset($_SESSION['panier']));
 ?>
 
 <?php
