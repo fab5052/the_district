@@ -61,7 +61,7 @@
  <div class="nav-authentication col-md-4 my-auto mx-auto m-3 d-flex d-md-lock justify-content-evenly align-items-center vertical-align-middle"> 
             <a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
             <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>   
-            <a href="#"> <i class="fas fa-shopping-cart red "></i> <span class="badge badge-red">0</span></a>
+            <a href="shopping.php"> <i class="fas fa-shopping-cart red "></i> <span class="badge badge-red">0</span></a>
 
 <?php if($_SERVER['PHP_SELF'] ):  ?>
  <div id="search">

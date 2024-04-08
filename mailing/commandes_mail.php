@@ -27,7 +27,7 @@ try {
     // Envoyer l'email
     $mail->send();
     echo 'Email envoyé avec succès!';
-    header ('Location: ../index.php');
+    header ('Location: ../login.php');
 
 } catch (Exception $e) {
     echo "Une erreur s'est produite lors de l'envoi de l'email : {$mail->ErrorInfo}";

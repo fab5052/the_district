@@ -82,11 +82,7 @@ public function getLibelle() {
         $categorie = get_categorie($this->getIdCategorie())[0];
         echo "<div>
         <img class=' img-fluid' src ='".$this->getImage()."' alt='Image de ".$this->getLibelle()."'>
-<<<<<<< HEAD
-        <div class='card-plat'>
-=======
         <div class= class='card-plat '>
->>>>>>> f72408db5316723d5a105c72ecbd21c6c204ca31
             <h2 class='card-title'>".$categorie->getLibelle()." / ".$this->getLibelle()."</h2>
             <p class='card-text'>".$this->getDescription()."</p>
             <h5 class='card-subtitle mb-2'>Prix: ".$this->getPrix()."</h5>

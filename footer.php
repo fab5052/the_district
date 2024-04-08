@@ -7,13 +7,10 @@
 
 
  
-<<<<<<< HEAD
-=======
  
 <div class="container-fluid bottom-0 h-20 my-auto">
 
 <div class="row">
->>>>>>> f72408db5316723d5a105c72ecbd21c6c204ca31
 
 
       <div class=" col-md-2 row">
@@ -72,14 +69,8 @@
 </script>-->
 <script src="assets/js/toggle.js"></script>
 
-<<<<<<< HEAD
-<!-- <script src="tarteaucitron/tarteaucitron.js"></script>
-
-<script type="text/javascript">
-=======
 <script src="tarteaucitron/tarteaucitron.js"></script>
 <!-- <script>
->>>>>>> f72408db5316723d5a105c72ecbd21c6c204ca31
 tarteaucitron.init({
     "privacyUrl": "", /* Privacy pocy url */
     "bodyPosition": "bottom", /* or top to bring it as first element for accessibity */
@@ -120,19 +111,9 @@ tarteaucitron.init({
     "mandatory": true, /* Show a message about mandatory cookies */
     "mandatoryCta": true, /* Show the disabled accept button when mandatory on */
     
-<<<<<<< HEAD
-  //"customCloserId": "", /* Optional a11y: Custom element ID used to open the panel */
-      
-    "googleConsentMode": true, /* Enable Google Consent Mode v2 for Google ads and GA4 */
-          
-    "partnersList": false,
-  });
-</script>  -->
-=======
     // "customCloserId": "" /* Optional a11y: Custom element ID used to open the panel */
 });
 </script> -->
->>>>>>> f72408db5316723d5a105c72ecbd21c6c204ca31
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -146,7 +127,7 @@ tarteaucitron.init({
 <script src='//cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.0/handlebars.min.js'></script><script src="assets/js/accordion.js"></script>
 <script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
 
-<script src="assets/js/slider.js"></script>
+<!-- <script src="assets/js/slider.js"></script>
 <script src="assets/js/jquery.js"></script>
 
 
@@ -166,7 +147,7 @@ tarteaucitron.init({
 
 
   });
-</script>
+</script> -->
 
 </body>
 

@@ -45,6 +45,14 @@ class Categorie {
         return $this;
     }
 
+    public function getActive() {
+        return $this->active;
+    }
+
+    public function setactive($active) {
+        $this->active = $active;
+        return $this;
+    }
   
 
     public function afficher_index_page() {

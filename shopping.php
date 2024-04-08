@@ -1,4 +1,4 @@
-
+<!-- 
 function template_header($shopping) {
 echo <<<EOT
 
@@ -39,112 +39,124 @@ echo <<<EOT
           <!--Custom styles for this template -->
         
         
-          <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-          integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-          crossorigin="anonymous"></script>
-          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-            <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
-          <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-          <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
-          <script src="tarteaucitron/tarteaucitron.js"></script>
-          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-         <link rel="stylesheet" href="assets/css/camera.css">
-          <link rel="stylesheet" href="assets/css/nav.css">
-        
-        
-        
-        </head>
-        
-        
-        <body>
-        
-        <header>
-        
-        <nav >
-  
-        <a href="index.php" class="nav-icon justify-content-center" aria-label="homepage" aria-current="page">
-                <span ><img  class="Logo justify-content-center position-relative" src="assets/img/images_the_district/the_district_brand/logo_transparent.png"></img>
-            
-                  </a>
-            
-                  <div class="main-navlinks">
-                    <bouton type="button" class=" toggle m-5" aria-label="Toggle Navigation" aria-expanded="false">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-            
-                      </button>
-            
-            
-            
-                  </div>
-                  <div class="navlinks-container col-md-6 d-flex justify-items-center">
-            
-                  <div class="content-wrapper">
+       
+<?php
+require 'header.php';  
+?>
 
-                      <a href="index.php">Home</a>
-                      <a href="index.php?page=products">Products</a>
-        
-                <a class="nav-link " href="index.php" aria-current="page">Accueil</a>
-                <a class="nav-link" href="categorie.php">Catégories</a>
-                <a class="nav-link" href="plat.php">Plats</a>
-                <a class="nav-link" href="contact.php">Contact</a>
-        
-              </div>
-        
-            
-              <div class="nav-authentication col-md-2 my-auto m-0 d-flex align-items-center vertical-align-center">
-            <div class="shopping " >
-                  <a href="#"> <i class="fa fa-shopping-cart red "></i> <span class="badge badge-red">0</span></a>
-                   
+<div class="parallax">
+
+    <div class="main-content  ">
+
+<div class="container">
+    <div class="row">
+    <div class="col-lg-2"></div>
+
+        <div class="col-md-5 ">
+        <h2>Vos Coordonnées</h2>
+        <?php
+        if (isset($_SESSION['panier']) && is_array($_SESSION['panier']))
+                $id = array_keys($_SESSION['panier']);
+                if (empty($id)) {
+                    $membres = array();
+                }else{
+                    $membres = $DB->query('SELECT * FROM plat WHERE id IN ('.implode(',',$id).')');
+                }
+                foreach ($plats as $plat):
+                ?>
+            <div class="coordonnee">
+                <p>Nom : <?php echo $membre->nom; ?></p>
+                <p>Prénom : <?php echo $membre->prenom; ?></p>
+                <p>E-mail : <?php echo $membre->email; ?></p>
+                <p>Téléphone : <?php echo $membre->phone; ?></p>
             </div>
-         
-                 <div class="sign-btns d-block">    <a href="login.php"> 
-            
-                   
-                  <i class="fa fa-sign-in" aria-hidden="true"></i></a> 
-                    </div>
-          
-            
-        
-            <div class="navtop">
-                <div>
-                 
-                    <a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
-                    <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
-                </div>
+        </div>
+        <?php  endforeach; ?>
+        <div class="col-md-5">
+        <h2>Coordonnées Du Club</h2>
+            <div class="coordonnee">
+                <p>Entente des Abers HB</p>
+                <p>6 Résidence Saint Sébastien-29870 Lannilis</p>
+                <p>ententedesabers@orange.fr</p>
+                <p>Téléphone :</p>
             </div>
-        
-                    
-        
-                        <form action="results.php" method="post"accept-charset="utf-8">
-                      <input type="text" name="input" class="input" placeholder="Search" />
-                      <button type="reset" class="search " id="search-button"> 
-                      </form>
-                      </button>
-                    </div>
-                    
-            </nav>
-         
-            </header>
-        <main>
-EOT;
-}
-// Template footer
-function template_footer() {
-$year = date('Y');
-echo <<<EOT
-        </main>
-        <footer>
-            <div class="content-wrapper">
-                <p>&copy; $year</p>
-            </div>
-        </footer>
-    </body>
-</html>
-EOT;
-}
+        </div>
+        <div class="col-sm-12 col-md-10 col-md-offset-1">
+        <h2>Votre panier</h2>
+        <form method="post" action="panier.php">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Article(s)</th>
+                        <th>Quantité</th>
+                        <th class="text-center">Prix</th>
+                        <th class="text-center">Total</th>
+                        <th><input type="submit" name="recalculer" value="Recalculer" class="btn btn-primary"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php
+                $ids = array_keys($_SESSION['panier']);
+                if (empty($ids)) {
+                    $products = array();
+                }else{
+                    $products = $DB->query('SELECT * FROM products WHERE id IN ('.implode(',',$ids).')');
+                }
+                foreach ($products as $product):
+                ?>
+                    <tr>
+                        <td class="col-sm-8 col-md-6">
+                        <div class="media">
+                            <a class="thumbnail pull-left" href="#"> <img class="media-object" src="img/min/<?php echo $product->id; ?>.jpg" style="width: 72px; height: 72px;"> </a>
+                            <div class="media-body">
+                                <h4 class="media-heading"><a href="#"><?php echo $product->name; ?></a></h4>
+                                <h5 class="media-heading"><?php  echo $product->description; ?></h5>
+                            </div>
+                        </div></td>
+                        <td class="col-sm-1 col-md-1" style="text-align: center">
+                        <input type="text" class="form-control" name="panier[quantity][<?php echo $product->id; ?>]" value="<?php echo $_SESSION['panier'][$product->id]; ?>">
+                        </td>
+                        <td></td>
+
+                        <td class="col-sm-1 col-md-1 text-center"><strong><?php echo number_format($product->price,2,',',' '); ?> €</strong></td>
+                        <td class="col-sm-1 col-md-1 text-center"><strong><?php echo number_format($product->price * 1.196,2,',',' '); ?> €</strong></td>
+                        <td></td>
+                    </tr>
+                <?php  endforeach; ?>
+                    <tr>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>   </td>
+                        <td><h5>Total HT</h5></td>
+                        <td class="text-right"><h5><strong><?php echo number_format($panier->total(),2,',',' ');  ?> €</strong></h5></td>
+                    </tr>
+
+                    <tr>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>   </td>
+                        <td><h3>Total TTC</h3></td>
+                        <td class="text-right"><h3><strong><?php echo number_format($panier->total() * 1.196,2,',',' ');  ?> €</strong></h3></td>
+                    </tr>
+
+                </tbody>
+            </table>
+            </form>
+            <a href="order.php" class="btn btn-primary">Version PDF</a>
+        </div>
+    </div>
+</div>
+
+<hr class="featurette-divider">
+
+
+</main>
+
+</div>
+
+
+<?php
+
+require_once('footer.php');
+
 ?>

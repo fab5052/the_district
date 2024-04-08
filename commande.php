@@ -1,29 +1,45 @@
 <?php
 
-if ($account['activation_code'] == 'activated') {
-	// account is activated
-	// Display home page etc
-} else {
-	// account is not activated
-	session_start(); 
+
+
+// if(!isset($_SESSION['panier'])); 
+// $stmt = $pdo->prepare('SELECT * FROM accounts WHERE id = ?');
+// $stmt->execute([ $_SESSION['id'] ]);
+// $account = $stmt->fetch(PDO::FETCH_ASSOC);
+// $plat_id = isset($_SESSION['panier']) ? $_SESSION['panier'] : null;
+
+$Currentpage = basename($_SERVER['PHP_SELF']);
+
+
+
+// Inclusion du fichier DAO pour accéder à la base de données
+require_once('./DAO.php');
+
+// $pdo = new PDO(...);
+
+
+
+$conn = new PDO("mysql:host=localhost;dbname=the_district", 'admin', 'Afpa1234');
+$conn->lastInsertId();
+session_start();
+
+if (!isset($_SESSION['panier'])) {
+
+// if ($account['activation_code'] == 'activated') {
+//     session_start(); 
+// 	// account is activated
+// 	// Display home page etc
+// } else {
+// 	// account is not activated
+
   
  // Rediriger vers la page de connexion si l'utilisateur n'est pas connecté 
  if (!isset($_SESSION['loggedin'])) { 
-     header('Location: login.php'); 
-     exit; 
- } 
+     header('Location: login.php');
  }
-
-if(!isset(session_use_strict_mode=On)); 
-$stmt = $pdo->prepare('SELECT * FROM accounts WHERE id = ?');
-$stmt->execute([ $_SESSION['id'] ]);
-$account = $stmt->fetch(PDO::FETCH_ASSOC);
-$plat_id = isset($_SESSION['panier']) ? $_SESSION['panier'] : null;
-
-
-require_once('view/view_plat_page.php');
-
-if (!isset($_SESSION['panier']));
+ }; 
+ 
+ require_once('view/view_plat_page.php');
 ?>
 
 <?php

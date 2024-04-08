@@ -16,9 +16,9 @@ require_once('header.php');
 
 
 
-        <div class="glue-cookie-notification-bar" id="glue-cookie-notification-bar-1" aria-labelledby="glue-cookie-notification-bar-1-label" role="region" tabindex="-1" style="font-size: 1rem;">
+        <!-- <div class="glue-cookie-notification-bar" id="glue-cookie-notification-bar-1" aria-labelledby="glue-cookie-notification-bar-1-label" role="region" tabindex="-1" style="font-size: 1rem;">
             <p class="glue-cookie-notification-bar__text"><span id="glue-cookie-notification-bar-1-label">www.google.com utilise des cookies Google afin de fournir ses services, d'en améliorer la qualité et d'analyser le trafic. </span><a href="https://policies.google.com/technologies/cookies?hl=fr" class="glue-cookie-notification-bar__more" rel="noopener" aria-describedby="glue-cookie-notification-bar-1-label" target="_blank" aria-label="En savoir plus sur la manière dont Google utilise les cookies (s'ouvre dans un autre onglet).">En savoir plus</a>.</p><button class="glue-cookie-notification-bar__accept">J'ai compris</button>
-        </div>
+        </div> -->
 
 
 
