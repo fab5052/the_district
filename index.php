@@ -76,28 +76,9 @@ require_once('header.php');
 
             ?>
 
-<<<<<<< HEAD
         </div>
-=======
-        <div class="ul d-block ">
-            <div class="li d-none ">
-        
-            </div>
-          
-<?php
->>>>>>> f72408db5316723d5a105c72ecbd21c6c204ca31
 
 
-<<<<<<< HEAD
-
-=======
-?>
-             
-         
-             </div>
-       
-        
->>>>>>> f72408db5316723d5a105c72ecbd21c6c204ca31
 
 
 
