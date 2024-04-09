@@ -38,9 +38,24 @@ echo <<<EOT
         
           <!--Custom styles for this template -->
         
-        
+ <?php  
+$Currentpage = basename($_SERVER['PHP_SELF']);
+
+
+
+// Inclusion du fichier DAO pour accéder à la base de données
+require_once('./DAO.php');
+
+// $pdo = new PDO(...);
+
+
+
+$conn = new PDO("mysql:host=localhost;dbname=the_district", 'admin', 'Afpa1234');
+$conn->lastInsertId();
+session_start();
+     
        
-<?php
+
 require 'header.php';  
 ?>
 
@@ -48,39 +63,32 @@ require 'header.php';
 
     <div class="main-content  ">
 
-<div class="container">
+<div class="container register">
     <div class="row">
     <div class="col-lg-2"></div>
 
         <div class="col-md-5 ">
         <h2>Vos Coordonnées</h2>
-        <?php
-        if (isset($_SESSION['panier']) && is_array($_SESSION['panier']))
-                $id = array_keys($_SESSION['panier']);
-                if (empty($id)) {
-                    $membres = array();
-                }else{
-                    $membres = $DB->query('SELECT * FROM plat WHERE id IN ('.implode(',',$id).')');
-                }
-                foreach ($plats as $plat):
-                ?>
-            <div class="coordonnee">
-                <p>Nom : <?php echo $membre->nom; ?></p>
-                <p>Prénom : <?php echo $membre->prenom; ?></p>
-                <p>E-mail : <?php echo $membre->email; ?></p>
-                <p>Téléphone : <?php echo $membre->phone; ?></p>
-            </div>
-        </div>
-        <?php  endforeach; ?>
-        <div class="col-md-5">
-        <h2>Coordonnées Du Club</h2>
-            <div class="coordonnee">
-                <p>Entente des Abers HB</p>
-                <p>6 Résidence Saint Sébastien-29870 Lannilis</p>
-                <p>ententedesabers@orange.fr</p>
-                <p>Téléphone :</p>
-            </div>
-        </div>
+   <?php
+if(isset($_SESSION['details_commande'])) {
+  $details_commande = $_SESSION['details_commande'];
+  $user  = $_SESSION['profile'];
+  echo '<h1>Nous sommes content de vous revoir '. $user['username'] . '</h1>';
+  echo '<h4>Vos informations</h4>';
+  echo '<p>Nom et Prénom: ' . $user['nom_prenom'] . '</p>';
+  echo '<p>Email: ' . $user['email'] . '</p>';
+  echo '<p>Adresse: ' . $details_commande[0]['adresse_client'] . '</p>';
+  echo '<p>Téléphone: ' . $details_commande[0]['telephone_client'] . '</p>';
+  // Afficher les détails des plats
+  foreach($details_commande as $detail) {
+      echo '<h2> Vous avez passez commande le : '.$detail['date_commande'].'</h2>';
+      echo '<p> Vous avez commandé : '.$detail['libelle_plat']. " En Quantité :".$detail['quantite'].'</p>';
+     echo '<p> le total de la comande est de :' .$detail['total']. " €</p>";
+  }
+} else {
+  echo 'Aucun détail de commande trouvé.';
+}
+?>
         <div class="col-sm-12 col-md-10 col-md-offset-1">
         <h2>Votre panier</h2>
         <form method="post" action="panier.php">
@@ -97,7 +105,7 @@ require 'header.php';
                 <tbody>
                 <?php
                 $ids = array_keys($_SESSION['panier']);
-                if (empty($ids)) {
+                if (empty($id)) {
                     $products = array();
                 }else{
                     $products = $DB->query('SELECT * FROM products WHERE id IN ('.implode(',',$ids).')');
