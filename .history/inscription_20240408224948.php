@@ -1,29 +1,59 @@
 <?php
+CREATE TABLE `comptes_definitifs` (
+	`id` smallint(6) NOT NULL auto_increment,
+	`pseudo` tinytext NOT NULL,
+	`password` tinytext NOT NULL,
+	`mail` tinytext NOT NULL,
+	`newsletter` tinytext NOT NULL,
+	`pays` tinytext NOT NULL,
+	`ville` tinytext NOT NULL,
+	`sexe` tinytext NOT NULL,
+	`date_naissance` tinytext NOT NULL,
+	KEY `id` (`id`)
+  ) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+  
+  -- 
+  -- Contenu de la table `comptes_definitifs`
+  -- 
+  
+  
+  -- --------------------------------------------------------
+  
+  -- 
+  -- Structure de la table `comptes_provisoirs`
+  -- 
+  
+  CREATE TABLE `comptes_provisoirs` (
+	`id` smallint(6) NOT NULL auto_increment,
+	`pseudo` tinytext NOT NULL,
+	`password` tinytext NOT NULL,
+	`mail` tinytext NOT NULL,
+	`newsletter` tinytext NOT NULL,
+	`pays` tinytext NOT NULL,
+	`ville` tinytext NOT NULL,
+	`sexe` tinytext NOT NULL,
+	`date_naissance` tinytext NOT NULL,
+	`clef` smallint(10) NOT NULL default '0',
+	KEY `id` (`id`)
+  ) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+  
+  -- 
+  -- Contenu de la table `comptes_provisoirs`
+  -- 
+<?php
 
+// paramètres  de connexion
+$hote = "localhost";
+$utilisateur = "root";
+$mdp = "";
 
-// require_once('classes/classe_cat.php');
-// require_once('classes/classe_plat.php');
-
-function connect_database () {
-    try {
-        $conn = new PDO("mysql:host=localhost;dbname=the_district", "admin", "Afpa1234");
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        
-        return $conn;
-    } catch(PDOException $e) {
-        echo "Erreur de connexion à la base de données : " . $e->getMessage();
-    }
-}
-
-$conn = connect_database();
-
+// choix de la base et table
+$data_base = "Codes";
 
 $table_cp = "comptes_provisoirs";
 $table_cd = "comptes_definitifs";
 
-
-
-                                                  //--------------------------------------------------------------------------------
+?>                                                      //--------------------------------------------------------------------------------
 														// INSCRIPTION ET VALIDATAION DE COMPTE PAR MAIL
 														//Hawaks le 21 Décembre 2005
 														//  ------------------------------------------------------------------------------

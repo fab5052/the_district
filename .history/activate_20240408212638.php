@@ -31,38 +31,3 @@
 // 		}
 // 	}
 //} -->
-
-<?php
-CREATE TABLE `comptes_definitifs` (
-	`id` smallint(6) NOT NULL auto_increment,
-	`pseudo` tinytext NOT NULL,
-	`password` tinytext NOT NULL,
-	`mail` tinytext NOT NULL,
-	`newsletter` tinytext NOT NULL,
-	`pays` tinytext NOT NULL,
-	`ville` tinytext NOT NULL,
-	`sexe` tinytext NOT NULL,
-	`date_naissance` tinytext NOT NULL,
-	KEY `id` (`id`)
-  ) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-  
-
-  
-
-  
-  CREATE TABLE `comptes_provisoirs` (
-	`id` smallint(6) NOT NULL auto_increment,
-	`pseudo` tinytext NOT NULL,
-	`password` tinytext NOT NULL,
-	`mail` tinytext NOT NULL,
-	`newsletter` tinytext NOT NULL,
-	`pays` tinytext NOT NULL,
-	`ville` tinytext NOT NULL,
-	`sexe` tinytext NOT NULL,
-	`date_naissance` tinytext NOT NULL,
-	`clef` smallint(10) NOT NULL default '0',
-	KEY `id` (`id`),
-  ) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-  
-
-?>

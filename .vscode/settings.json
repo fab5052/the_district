@@ -1,9 +1,10 @@
 {
-    "liveServer.settings.port": 8000,
+ 
     "php.version": "8.1.27",
     
     "auto-rename-tag.activationOnLanguage": [
         
         "*"
-    ]
+    ],
+    "php.validate.executablePath": ""
 }

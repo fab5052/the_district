@@ -40,9 +40,11 @@ if (isset($_POST['username'], $_POST['password'], $_POST['confirm_password'],  $
 		exit('Password must be between 5 and 20 characters long!');
 	}
 
-    if ($_POST['password'] != $_POST['confirm_password']) {
-        echo 'Mauvais pass<br/>';
-    }
+	if ($password != $confirm_password)
+	
+	 ?>Mauvais pass<br/><?
+    
+	}
 
 	if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
 		exit('Email is not valid!');
@@ -65,7 +67,7 @@ if (isset($_POST['username'], $_POST['password'], $_POST['confirm_password'],  $
 	$stmt = $conn->prepare('INSERT INTO accounts (username, password,  email, activation_code) VALUES (?, ?, ?, ?)');
 	$stmt->bind_param('ssss', $_POST['username'], $password, $_POST['email'], $activation_code);
 	$stmt->execute();
-	
+	$stmt->close();
 
 	// Send activation email
 	$mail = new PHPMailer(true);
@@ -82,7 +84,7 @@ if (isset($_POST['username'], $_POST['password'], $_POST['confirm_password'],  $
 		// Contenu du message
 		$mail->isHTML(true);
 		$mail->Subject = 'Account Activation Required';
-		$activate_link = 'http://localhost/register.php?email=' . $_POST['email'] . '&code=' . $activation_code;
+		$activate_link = '@the_district/login.php?email=' . $_POST['email'] . '&code=' . $activation_code;
 		$message = '<p>Please click the following link to activate your account: <a href="' . $activate_link . '">' . $activate_link . '</a></p>';
 		$mail->Body = $message;
 
@@ -94,31 +96,30 @@ if (isset($_POST['username'], $_POST['password'], $_POST['confirm_password'],  $
 	} catch (Exception $e) {
 		echo "Une erreur s'est produite lors de l'envoi de l'email : {$mail->ErrorInfo}";
 	}
-	if (isset($_GET['email'], $_GET['code'])) {
-		// Activation code provided, proceed with activation
-		$stmt = $conn->prepare('SELECT id FROM accounts WHERE email = ? AND activation_code = ?');
-		$stmt->bind_param('ss', $_GET['email'], $_GET['code']);
-		$stmt->execute();
-		$stmt->store_result();
-		if ($stmt->num_rows > 0) {
-			// Account exists with the requested email and code.
-			$stmt = $conn->prepare('UPDATE accounts SET activation_code = ? WHERE email = ? AND activation_code = ?');
-			$newcode = 'activated';
-			$stmt->bind_param('sss', $newcode, $_GET['email'], $_GET['code']);
-			$stmt->execute();
-			$stmt->close();
-	
-			// Check if the update was successful
-			if ($stmt->affected_rows > 0) {
-				echo 'Your account is now activated!';
-			} else {
-				echo 'Failed to activate your account. Please try again later.';
-			}
-		} else {
-			echo 'The account is already activated or doesn\'t exist!';
-		}
-	}
-	$conn->close();
+ if (isset($_GET['email'], $_GET['code'])) {
+    // Activation code provided, proceed with activation
+    $stmt = $conn->prepare('SELECT id FROM accounts WHERE email = ? AND activation_code = ?');
+    $stmt->bind_param('ss', $_GET['email'], $_GET['code']);
+    $stmt->execute();
+    $stmt->store_result();
+    if ($stmt->num_rows > 0) {
+        // Account exists with the requested email and code.
+        $stmt = $conn->prepare('UPDATE accounts SET activation_code = ? WHERE email = ? AND activation_code = ?');
+        $newcode = 'activated';
+        $stmt->bind_param('sss', $newcode, $_GET['email'], $_GET['code']);
+        $stmt->execute();
 
-	}
+        // Check if the update was successful
+        if ($stmt->affected_rows > 0) {
+            echo 'Your account is now activated!';
+        } else {
+            echo 'Failed to activate your account. Please try again later.';
+        }
+    } else {
+        echo 'The account is already activated or doesn\'t exist!';
+    }
+}
+
+
+$conn->close();
 ?>

@@ -108,7 +108,7 @@ if(isset($_SESSION['details_commande'])) {
                 if (empty($id)) {
                     $products = array();
                 }else{
-                    $products = $DB->query('SELECT * FROM products WHERE id IN ('.implode(',',$id).')');
+                    $products = $DB->query('SELECT * FROM products WHERE id IN ('.implode(',',$ids).')');
                 }
                 foreach ($products as $product):
                 ?>

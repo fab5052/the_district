@@ -21,7 +21,7 @@ if (mysqli_connect_errno()) {
 session_start();
 
 // Now we check if the data was submitted, isset() function will check if the data exists.
-if (isset($_POST['username'], $_POST['password'], $_POST['confirm_password'],  $_POST['email'])) {
+if (isset($_POST['username'], $_POST['password'], $_POST['confirm_password'],  $_POST['email'])) 
 	// Make sure the submitted registration values are not empty.
 	if (empty($_POST['username']) || empty($_POST['password']) || empty($_POST['confirm_password']) || empty($_POST['email'])) {
 		// One or more values are empty.
@@ -40,9 +40,9 @@ if (isset($_POST['username'], $_POST['password'], $_POST['confirm_password'],  $
 		exit('Password must be between 5 and 20 characters long!');
 	}
 
-    if ($_POST['password'] != $_POST['confirm_password']) {
-        echo 'Mauvais pass<br/>';
-    }
+	if ($password != $confirm_password) {
+		echo 'Mauvais pass<br/>';
+	}
 
 	if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
 		exit('Email is not valid!');
@@ -82,7 +82,7 @@ if (isset($_POST['username'], $_POST['password'], $_POST['confirm_password'],  $
 		// Contenu du message
 		$mail->isHTML(true);
 		$mail->Subject = 'Account Activation Required';
-		$activate_link = 'http://localhost/register.php?email=' . $_POST['email'] . '&code=' . $activation_code;
+		$activate_link = '@the_district/register.php?email=' . $_POST['email'] . '&code=' . $activation_code;
 		$message = '<p>Please click the following link to activate your account: <a href="' . $activate_link . '">' . $activate_link . '</a></p>';
 		$mail->Body = $message;
 
@@ -118,7 +118,5 @@ if (isset($_POST['username'], $_POST['password'], $_POST['confirm_password'],  $
 			echo 'The account is already activated or doesn\'t exist!';
 		}
 	}
-	$conn->close();
 
-	}
-?>
+	$conn->close();

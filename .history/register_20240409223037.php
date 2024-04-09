@@ -82,7 +82,7 @@ if (isset($_POST['username'], $_POST['password'], $_POST['confirm_password'],  $
 		// Contenu du message
 		$mail->isHTML(true);
 		$mail->Subject = 'Account Activation Required';
-		$activate_link = 'http://localhost/register.php?email=' . $_POST['email'] . '&code=' . $activation_code;
+		$activate_link = '@the_district/login.php?email=' . $_POST['email'] . '&code=' . $activation_code;
 		$message = '<p>Please click the following link to activate your account: <a href="' . $activate_link . '">' . $activate_link . '</a></p>';
 		$mail->Body = $message;
 
