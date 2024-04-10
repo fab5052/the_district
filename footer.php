@@ -1,5 +1,6 @@
 <footer>
 
+<p class="text-right "><a href="#">Revenir en haut ▲</a></p>
 <div  class="container-fluid text-muted d-sm-flex w-100 mx-auto my-auto top-100 ">
 
 <p class="text-left ">@ 2024 &middot;<a href="#">Tous droits &middot;</a><a href="#"> réservés</a></p>
@@ -37,7 +38,7 @@
           <a href="#"><i class="fa fa-twitter"></i></a> 
 
     </div>
-    <p class="text-right "><a href="#">Revenir en haut ▲</a></p>
+
     
 
     </div>
@@ -69,7 +70,7 @@
 </script>-->
 <script src="assets/js/toggle.js"></script>
 
-<script src="tarteaucitron/tarteaucitron.js"></script>
+<!-- <script src="tarteaucitron/tarteaucitron.js"></script> -->
 <!-- <script>
 tarteaucitron.init({
     "privacyUrl": "", /* Privacy pocy url */
