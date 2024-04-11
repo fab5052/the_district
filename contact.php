@@ -1,15 +1,19 @@
-<?php
 
-require_once('header.php');
-
-
-?>
    
    <?php
+   
+// use PHPMailer\PHPMailer\PHPMailer;
+// // use PHPMailer\PHPMailer\Exception;
+
+// // Inclure la classe PHPMailer
+// require '../vendor/autoload.php';
+
+// Créer une instance de PHPMailer
+// $mail = new PHPMailer(true);
 // Output messages
 $responses = [];
 // Check if the form was submitted
-if (isset($_POST['email'], $_POST['subject'], $_POST['name'], $_POST['msg'])) {
+if (isset($_POST['email'], $_POST['subject'], $_POST['name'], $_POST['msg'])) 
 	// Validate email adress
 	if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
 		$responses[] = 'Email is not valid!';
@@ -21,15 +25,9 @@ if (isset($_POST['email'], $_POST['subject'], $_POST['name'], $_POST['msg'])) {
 	// If there are no errors
 	if (!$responses) {
 		// Where to send the mail? It should be your email address
-		$to      = 'contact@example.com';
-		// Send mail from which email address?
-		$from = 'noreply@example.com';
-		// Mail subject
-		$subject = $_POST['subject'];
-		// Mail message
-		$message = $_POST['msg'];
-		// Mail headers
-		$headers = 'From: ' . $from . "\r\n" . 'Reply-To: ' . $_POST['email'] . "\r\n" . 'X-Mailer: PHP/' . phpversion();
+
+
+
 		// Try to send the mail
 		if (mail($to, $subject, $message, $headers)) {
 			// Success
@@ -39,42 +37,47 @@ if (isset($_POST['email'], $_POST['subject'], $_POST['name'], $_POST['msg'])) {
 			$responses[] = 'Message could not be sent! Please check your mail server settings!';
 		}
 	}
-}
+  
+
+
+
+
+require_once('header.php');
+
+
 ?>
-
-
 
 
 <div class="parallax">
 
 <main class="main-content h-100 top-40">
 
+
+
+
+
+
+
+<div class="container-fluid col-4 justify-content-center h-50 position-relative mx-auto top-40">
+
+<form class="contact" method="post" action="mailing/reception_contact.php">
 <h1 class="mt-8">
   <i class="neon-red">Formulaire</i>
   <i class="neon-blue">Contact</i>
 </h1>
-
-
-
-
-
-<div class="container-fluid col-4 justify-content-center  position-relative mx-auto top-40">
-
-<form class="contact" method="post" action="mailing/reception_contact.php">
-			<h1>Contact Form</h1>
-			<div class="fields">
+			<div class="fields-register form ">
 				<label for="email">
-					<i class="fas fa-envelope"></i>
-					<input id="email" type="email" name="email" placeholder="Your Email" required>
+					<i class="fa fa-envelope"></i>
+					<input id="email" type="email" name="email" placeholder="Votre Email" autocomplete="$_POST['email']" required>
 				</label>
 				<label for="name">
 					<i class="fas fa-user"></i>
-					<input type="text" name="name" placeholder="Your Name" required>
+					<input id="name" type="text" name="name" placeholder="Votre Nom" autocomplete="$_COOKIE" required>
 				<label>
-				<input type="text" name="subject" placeholder="Subject" required>
+				<input id="subject" type="text" name="subject" placeholder="Sujet" required>
 				<textarea name="msg" placeholder="Message" required></textarea>
 			</div>
-      <div class="reg my-auto d-flex justify-content-center ">
+      <div class="reg m-2 d-flex justify-content-center ">
               <h5 >Vous n'avez pas de compte :</h5>
          <h4><a href="register.html"> Inscrivez-vous </a></h4>
           </div>
@@ -85,8 +88,8 @@ if (isset($_POST['email'], $_POST['subject'], $_POST['name'], $_POST['msg'])) {
 <p class="responses"><?php echo implode('<br>', $responses); ?></p>
 <?php endif; ?>
 		
-    <div class="fields d-flex justify-content-center align-items-middle my-auto">
-                By creating an account, you agree to <a
+    <div class="reg d-block justify-content-center align-items-middle my-auto">
+                Par la création d'un compte vous agrée à:<a
                   href="/gp/help/customer/display.html/ref=ap_register_notification_condition_of_use?ie=UTF8&amp;nodeId=643006">Conditions
                   of Use</a> and <a
                   href="/gp/help/customer/display.html/ref=ap_register_notification_privacy_notice?ie=UTF8&amp;nodeId=643000">Privacy
@@ -486,7 +489,7 @@ if (isset($_POST['email'], $_POST['subject'], $_POST['name'], $_POST['msg'])) {
                     <span class="email-text aok-hidden">Verify email</span>
                   </span></span></span>
             </div>-->
-
+      
 
         
 <?php

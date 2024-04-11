@@ -1,47 +1,49 @@
 <footer>
 
-<p class="text-right "><a href="#">Revenir en haut ▲</a></p>
-<div  class="container-fluid text-muted d-sm-flex w-100 mx-auto my-auto top-100 ">
 
-<p class="text-left ">@ 2024 &middot;<a href="#">Tous droits &middot;</a><a href="#"> réservés</a></p>
-  
-
-
- 
- 
-<div class="container-fluid bottom-0 h-20 my-auto">
-
-<div class="row">
+<p class="pull-right p-4 top-100"><a href="#">Revenir en haut ▲</a></p>
+<div class="container-fluid  ">
+  <div class="row">
 
 
-      <div class=" col-md-2 row">
-        <h3>A propos</h3>
-          <a href="#">Historique</a>
-          <a href="#">Service clients</a>
 
-      </div>
-      <div class="row col-md-2">
-        <h3>Partners</h3>
-          <a href="#">MIO</a>
-          <a href="#">AFPA</a>
-      </div>
-      <div class="row col-md-2">
-        <h3>Service clients</h3>
-          <a href="#">Chat</a>
-          <a href="#">03 22 453 352</a>
-      </div>
-      <div class="row col-md-2">
-        <h3>Socials</h3>
-      
-          <a href="#"><i class="fa fa-facebook"></i></a>
-          <a href="#"><i class="fa fa-instagram"></i></a>
-          <a href="#"><i class="fa fa-twitter"></i></a> 
 
-    </div>
 
-    
+  <div class="col-md-3">
+    <h3 class="h3">A propos</h3>
+    <ul class="footer-list">
+    <li><a href="#">Historique</a></li>
+    <li><a href="#">Service clients</a></li>
 
-    </div>
+    </ul>
+  </div>
+  <div class="col-md-3">
+    <h3 class="h3">Partners</h3>
+    <ul class="footer-list">
+
+    <li><a href="#">MIO</a></li>
+
+    </ul>
+  </div>
+  <div class="col-md-3">
+    <h3 class="h3">Service clents</h3>
+    <ul class="footer-list">
+    <li><a href="#">Chat</a></li>
+    <li><a href="#">03 22 453 352</a></li>
+
+    </ul>
+  </div>
+  <div class="col-md-3">
+    <h3 class="h3">Socials</h3>
+    <ul class="footer-list footer-list-inline">
+    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+    </ul>
+  </div>
+
+  <p class="droits m-4">@ 2017-2024 &middot;<a href="#">Tous droits &middot;</a><a href="#"> réservés</a></p>
+  </div>
 
 </footer>
 
