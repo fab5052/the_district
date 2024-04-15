@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
 
   <link rel="stylesheet" href="assets/css/style.css">
-  <!-- <link rel="stylesheet" href="assets/css/style.less"> -->
+  <link rel="stylesheet" href="assets/css/style.less">
   <!-- <link rel="stylesheet" href="assets/css/camera.css"> -->
 
 
@@ -34,45 +34,46 @@
 
 <body>
 
-  <header>
+<header>
 
-    <nav>
+<nav >
+    
+<a href="index.php" class="nav-icon justify-content-center" aria-label="homepage" aria-current="page">
+        <span ><img  class="Logo justify-content-center position-relative" src="assets/img/images_the_district/the_district_brand/logo_transparent.png"></img></a>
+    
+          <div class="main-navlinks">
+            <bouton type="button" class=" toggle m-5" aria-label="Toggle Navigation" aria-expanded="false">
+              <span></span>
+              <span></span>
+              <span></span>
+           </button>
+          </div>
 
-      <a href="index.php" class="nav-icon justify-content-center" aria-label="homepage" aria-current="page">
-        <span><img class="Logo justify-content-center position-relative" src="assets/img/images_the_district/the_district_brand/logo_transparent.png"></img></a>
-
-      <div class="main-navlinks">
-        <bouton type="button" class=" toggle m-5" aria-label="Toggle Navigation" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
-          </button>
-      </div>
-
-      <div class="navlinks-container col-md-6 d-flex justify-items-center">
+<div class="navlinks-container col-md-6 d-flex justify-items-center">    
         <a class="nav-link " href="index.php">Accueil</a>
         <a class="nav-link" href="categorie.php">Catégories</a>
         <a class="nav-link" href="plat.php">Plats</a>
         <a class="nav-link" href="contact.php">Contact</a>
       </div>
+   
+ <div class="nav-authentication col-md-4 my-auto mx-auto m-3 d-flex justify-content-evenly align-items-center vertical-align-center"> 
+            <a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
+            <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>   
+            <a href="#"> <i class="fa fa-shopping-cart red "></i> <span class="badge badge-red">0</span></a>
+             
 
-      <div class="nav-authentication col-md-4 my-auto mx-auto m-3 d-flex d-md-lock justify-content-evenly align-items-center vertical-align-middle">
-        <a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
-        <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
-        <a href="shopping.php"> <i class="fas fa-shopping-cart red "></i> <span class="badge badge-red">0</span></a>
+			<div id="search">
+			 <form id="search"  method="get" accept-charset="utf-8">
+			 <input type="text" name="searchTerm" class="input" placeholder="Search" />
+			 <button type="reset" class="search " id="search-button"> 
+			 </button>
+			 </form>
+			</div>
 
-        <?php if ($_SERVER['PHP_SELF']) :  ?>
-          <div id="search">
-            <form id="search" method="get" accept-charset="utf-8">
-              <input type="text" name="searchTerm" class="input" placeholder="Search" />
-              <button type="reset" class="search " id="search-button">
-              </button>
-            </form>
-          <?php endif; ?>
-          </div>
+		
+ </div>
 
-      </div>
+     
+ </nav>
 
-    </nav>
-
-  </header>
+</header></header>

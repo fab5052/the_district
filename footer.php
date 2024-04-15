@@ -35,10 +35,9 @@
   </div>
   <div class="col-md-3">
     <h3 class="h3">Socials</h3>
-    <ul class="footer-list footer-list-inline">
-    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+    <li><a href="#"><i class="fas fa-facebook"></i></a></li>
+    <li><a href="#"><i class="fas fa-instagram"></i></a></li>
+    <li><a href="#"><i class="fas fa-twitter"></i></a></li>
     </ul>
   </div>
 

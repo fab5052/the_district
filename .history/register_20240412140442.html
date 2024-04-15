@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Fil_Rouge</title>
+
+
+  <!--Custom styles for this template -->
+
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+  crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+  <link rel="tarteaucitron/css/tarteaucitron.css">
+  <link rel="tarteaucitron/css/tarteaucitron.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- <link rel="stylesheet" href="assets/css/camera.css"> -->
+
+
+</head>
+
+
+<body>
+
+<header>
+
+<nav >
+    
+<a href="index.php" class="nav-icon justify-content-center" aria-label="homepage" aria-current="page">
+        <span ><img  class="Logo justify-content-center position-relative" src="assets/img/images_the_district/the_district_brand/logo_transparent.png"></img></a>
+    
+          <div class="main-navlinks">
+            <bouton type="button" class=" toggle m-5" aria-label="Toggle Navigation" aria-expanded="false">
+              <span></span>
+              <span></span>
+              <span></span>
+           </button>
+          </div>
+
+<div class="navlinks-container col-md-6 d-flex justify-items-center">    
+        <a class="nav-link " href="index.php">Accueil</a>
+        <a class="nav-link" href="categorie.php">Catégories</a>
+        <a class="nav-link" href="plat.php">Plats</a>
+        <a class="nav-link" href="contact.php">Contact</a>
+      </div>
+   
+ <div class="nav-authentication col-md-4 my-auto mx-auto m-3 d-flex justify-content-evenly align-items-center vertical-align-center"> 
+            <a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
+            <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>   
+            <a href="#"> <i class="fa fa-shopping-cart red "></i> <span class="badge badge-red">0</span></a>
+             
+
+			<div id="search">
+			 <form id="search"  method="get" accept-charset="utf-8">
+			 <input type="text" name="searchTerm" class="input" placeholder="Search" />
+			 <button type="reset" class="search " id="search-button"> 
+			 </button>
+			 </form>
+			</div>
+
+		
+ </div>
+
+     
+ </nav>
+
+</header>
+
+	
+	<div class="parallax">
+
+		<div class="main-content  ">
+
+<div class="AddViewPopover__AddViewPopoverListbox-sc-1om1x2n-2 fnbrMt"><div data-test-id="add-view-popover-category-default" class="AddViewPopover__AddViewPopoverCategory-sc-1om1x2n-3 cHXAxX"><div class="ViewCategoryColumn__StyledColumnContent-sc-1q6ykto-1 firNKr"><div data-test-id="view-category-column-header-default-opened" direction="row" class="ViewCategoryColumn__StyledUIFlex-sc-1q6ykto-6 ViewCategoryColumn__StyledColumnCategoryHeaderName-sc-1q6ykto-7 dAMBHh"><svg viewBox="0 0 16 16" height="24px"><title>HubSpot fourni</title><path d="M11.6127 10.9174C10.4763 10.9174 9.55512 10.0374 9.55512 8.95201C9.55512 7.86645 10.4763 6.98646 11.6127 6.98646C12.749 6.98646 13.6702 7.86645 13.6702 8.95201C13.6702 10.0374 12.749 10.9174 11.6127 10.9174ZM12.2286 5.16801V3.41954C12.7064 3.20397 13.041 2.74229 13.041 2.20648V2.16612C13.041 1.42664 12.4077 0.821619 11.6336 0.821619H11.5915C10.8174 0.821619 10.1841 1.42664 10.1841 2.16612V2.20648C10.1841 2.74229 10.5187 3.20416 10.9965 3.41972V5.16801C10.2852 5.27306 9.63527 5.55332 9.09927 5.96578L4.07384 2.23138C4.107 2.10973 4.1303 1.9845 4.1305 1.85286C4.13129 1.0155 3.42174 0.335606 2.54479 0.334474C1.66822 0.333532 0.956311 1.01154 0.955323 1.84909C0.954337 2.68665 1.66388 3.36654 2.54084 3.36748C2.82651 3.36786 3.09106 3.29035 3.32283 3.16436L8.26614 6.83803C7.84582 7.44418 7.59944 8.17028 7.59944 8.95201C7.59944 9.77033 7.8701 10.5274 8.32734 11.1499L6.82415 12.5861C6.7053 12.5519 6.58211 12.5282 6.45141 12.5282C5.73101 12.5282 5.14684 13.086 5.14684 13.7742C5.14684 14.4626 5.73101 15.0205 6.45141 15.0205C7.17201 15.0205 7.75599 14.4626 7.75599 13.7742C7.75599 13.6498 7.73112 13.5319 7.69538 13.4184L9.18238 11.9978C9.85738 12.4899 10.698 12.7856 11.6127 12.7856C13.8292 12.7856 15.6257 11.0692 15.6257 8.95201C15.6257 7.03531 14.1517 5.45185 12.2286 5.16801Z" fill="#FF7A59"></path></svg>HubSpot fourni (1)<div class="ViewCategoryColumn__StyledIconExpandedContainer-sc-1q6ykto-5 cNrTeb"><button data-test-id="view-category-column-button-default-opened" aria-disabled="false" class="uiButton private-button private-button--tertiary-light private-button--xs UIIconButton__Button-a5pm06-0 bKGdvu private-button--icon-only private-button--non-responsive private-button--non-link" data-button-use="tertiary-light" tabindex="0" type="button"><span class="private-icon private-icon__low" data-icon-name="left"><span aria-hidden="true" class="UIIcon__IconContent-sc-5mzzz4-0 cjFjnT"></span></span></button></div></div><div class="ViewCategoryColumn__StyledViewsListContent-sc-1q6ykto-8 hKBkVM"><div data-test-id="view-ui-clickable-all" role="button" aria-disabled="false" class="private-clickable UIClickable-r03pla-0 hzgdTx ViewCategoryColumn__StyledUIClickable-sc-1q6ykto-11 hVjnax" tabindex="0" style="height: 40px;"><div class="ViewCategoryColumn__StyledViewsListContentLabel-sc-1q6ykto-9 bxTGnX"><span class="private-truncated-string" data-content="true"><span class="private-truncated-string__inner"><span>Toutes les commandes</span></span></span></div></div></div></div></div><div data-test-id="add-view-popover-category-promoted" class="AddViewPopover__AddViewPopoverCategory-sc-1om1x2n-3 cHXAxX"><div class="ViewCategoryColumn__StyledColumnContent-sc-1q6ykto-1 firNKr"><div data-test-id="view-category-column-header-promoted-opened" direction="row" class="ViewCategoryColumn__StyledUIFlex-sc-1q6ykto-6 ViewCategoryColumn__StyledColumnCategoryHeaderName-sc-1q6ykto-7 devQSf">Administrateur promu (1)<div class="ViewCategoryColumn__StyledIconExpandedContainer-sc-1q6ykto-5 cNrTeb"><button data-test-id="view-category-column-button-promoted-opened" aria-disabled="false" class="uiButton private-button private-button--tertiary-light private-button--xs UIIconButton__Button-a5pm06-0 bKGdvu private-button--icon-only private-button--non-responsive private-button--non-link" data-button-use="tertiary-light" tabindex="0" type="button"><span class="private-icon private-icon__low" data-icon-name="left"><span aria-hidden="true" class="UIIcon__IconContent-sc-5mzzz4-0 cjFjnT"></span></span></button></div></div><div class="ViewCategoryColumn__StyledViewsListContent-sc-1q6ykto-8 hKBkVM"><div data-test-id="view-ui-clickable-all" role="button" aria-disabled="false" class="private-clickable UIClickable-r03pla-0 hzgdTx ViewCategoryColumn__StyledUIClickable-sc-1q6ykto-11 hVjnax" tabindex="0" style="height: 40px;"><div class="ViewCategoryColumn__StyledViewsListContentLabel-sc-1q6ykto-9 bxTGnX"><span class="private-truncated-string" data-content="true"><span class="private-truncated-string__inner"><span>Toutes les commandes</span></span></span></div></div></div></div></div><div data-test-id="add-view-popover-category-mine" class="AddViewPopover__AddViewPopoverCategory-sc-1om1x2n-3 cHXAxX"><div data-test-id="view-category-column-header-mine" class="ViewCategoryColumn__StyledColumnHeader-sc-1q6ykto-0 gXUBKs"><p class="ViewCategoryColumn__StyledColumnCategory-sc-1q6ykto-2 jfiSwn">Créé par moi (0)</p><div class="ViewCategoryColumn__StyledIconCollapsedContainer-sc-1q6ykto-4 bZfJcm"><button data-test-id="view-category-column-button-mine" aria-disabled="true" class="uiButton private-button private-button--tertiary-light private-button--xs UIIconButton__Button-a5pm06-0 bKGdvu private-button--icon-only disabled private-button--disabled private-button--non-responsive private-button--non-link" data-button-use="tertiary-light" tabindex="-1" type="button"><span class="private-icon private-icon__low" data-icon-name="right"><span aria-hidden="true" class="UIIcon__IconContent-sc-5mzzz4-0 eqplGQ"></span></span></button></div></div></div><div data-test-id="add-view-popover-category-others" class="AddViewPopover__AddViewPopoverCategory-sc-1om1x2n-3 cHXAxX"><div data-test-id="view-category-column-header-others" class="ViewCategoryColumn__StyledColumnHeader-sc-1q6ykto-0 gXUBKs"><p class="ViewCategoryColumn__StyledColumnCategory-sc-1q6ykto-2 jfiSwn">Créé par d'autres (0)</p><div class="ViewCategoryColumn__StyledIconCollapsedContainer-sc-1q6ykto-4 bZfJcm"><button data-test-id="view-category-column-button-others" aria-disabled="true" class="uiButton private-button private-button--tertiary-light private-button--xs UIIconButton__Button-a5pm06-0 bKGdvu private-button--icon-only disabled private-button--disabled private-button--non-responsive private-button--non-link" data-button-use="tertiary-light" tabindex="-1" type="button"><span class="private-icon private-icon__low" data-icon-name="right"><span aria-hidden="true" class="UIIcon__IconContent-sc-5mzzz4-0 eqplGQ"></span></span></button></div></div></div></div>
+
+
+			<div id="hsg-modals-wrapper" data-modals-container="" class="active"><div class="hsg-modal-container hsg-modal-open" data-modal="offers-sign-up" data-exit="0" data-play-video-on-exit="1" role="dialog" aria-label="Sample Content Modal" aria-modal="true">
+				<div class="hsg-modal-contents hsg-modal-contents--columns">
+				  
+						<button data-background="secondary4" class="hsg-modal-header" aria-label="Close Dialog">
+							<span class="hsg-icon hsg-icon-close"></span>
+						</button><div class="hsg-modal-text"><h2 id="offers-sign-up-header">Remplissez ce formulaire pour accéder au modèle</h2>
+						  
+								  
+								  
+						  <!-- SWYT: redirect || Thanks for submitting the form. -->
+						  <span id="hs_cos_wrapper_module_1560786576435114_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_form" style="" data-hs-cos-general-type="widget" data-hs-cos-type="form"><h3 id="hs_cos_wrapper_form_874064587_title" class="hs_cos_wrapper form-title" data-hs-cos-general-type="widget_field" data-hs-cos-type="text"></h3>
+			
+			<div id="hs_form_target_form_874064587" data-hs-forms-root="true"><form id="hsForm_4a221e15-f640-4739-9fc4-56bc8f0d94a8_5162" method="POST" accept-charset="UTF-8" enctype="multipart/form-data" novalidate="" action="https://forms.hsforms.com/submissions/v3/public/submit/formsnext/multipart/53/4a221e15-f640-4739-9fc4-56bc8f0d94a8" class="hs-form-private hsForm_4a221e15-f640-4739-9fc4-56bc8f0d94a8 hs-form-4a221e15-f640-4739-9fc4-56bc8f0d94a8 hs-form-4a221e15-f640-4739-9fc4-56bc8f0d94a8_18d837ac-8680-4839-a050-df89b3fe08df hs-form stacked hs-custom-form" target="target_iframe_4a221e15-f640-4739-9fc4-56bc8f0d94a8_5162" data-instance-id="18d837ac-8680-4839-a050-df89b3fe08df" data-form-id="4a221e15-f640-4739-9fc4-56bc8f0d94a8" data-portal-id="53" data-test-id="hsForm_4a221e15-f640-4739-9fc4-56bc8f0d94a8_5162"><fieldset class="form-columns-2"><div class="hs_firstname hs-firstname hs-fieldtype-text field hs-form-field"><label id="label-firstname-4a221e15-f640-4739-9fc4-56bc8f0d94a8_5162" class="" placeholder="Enter your Prénom" for="firstname-4a221e15-f640-4739-9fc4-56bc8f0d94a8_5162"><span>Prénom</span><span class="hs-form-required">*</span></label><legend class="hs-field-desc" style="display: none;"></legend><div class="input"><input id="firstname-4a221e15-f640-4739-9fc4-56bc8f0d94a8_5162" name="firstname" required="" placeholder="" type="text" class="hs-input invalid error" inputmode="text" autocomplete="given-name" value=""></div><ul class="no-list hs-error-msgs inputs-list" role="alert"><li><label class="hs-error-msg hs-main-font-element">Veuillez remplir ce champ obligatoire.</label></li></ul></div><div class="hs_lastname hs-lastname hs-fieldtype-text field hs-form-field"><label id="label-lastname-4a221e15-f640-4739-9fc4-56bc8f0d94a8_5162" class="" placeholder="Enter your Nom " for="lastname-4a221e15-f640-4739-9fc4-56bc8f0d94a8_5162"><span>Nom </span><span class="hs-form-required">*</span></label><legend class="hs-field-desc" style="display: none;"></legend><div class="input"><input id="lastname-4a221e15-f640-4739-9fc4-56bc8f0d94a8_5162" name="lastname" required="" placeholder="" type="text" class="hs-input" inputmode="text" autocomplete="family-name" value=""></div></div></fieldset><fieldset class="form-columns-1"><div class="hs_email hs-email hs-fieldtype-text field hs-form-field"><label id="label-email-4a221e15-f640-4739-9fc4-56bc8f0d94a8_5162" class="" placeholder="Enter your E-mail professionnel" for="email-4a221e15-f640-4739-9fc4-56bc8f0d94a8_5162"><span>E-mail professionnel</span><span class="hs-form-required">*</span></label><legend class="hs-field-desc" style="display: none;"></legend><div class="input"><input id="email-4a221e15-f640-4739-9fc4-56bc8f0d94a8_5162" name="email" required="" placeholder="" type="email" class="hs-input" inputmode="email" autocomplete="email" value=""></div></div></fieldset><fieldset class="form-columns-3"><div class="hs_company hs-company hs-fieldtype-text field hs-form-field smart-field"><label id="label-company-4a221e15-f640-4739-9fc4-56bc8f0d94a8_5162" class="" placeholder="Enter your Nom de l'entreprise" for="company-4a221e15-f640-4739-9fc4-56bc8f0d94a8_5162"><span>Nom de l'entreprise</span><span class="hs-form-required">*</span></label><legend class="hs-field-desc" style="display: none;"></legend><div class="input"><input id="company-4a221e15-f640-4739-9fc4-56bc8f0d94a8_5162" name="company" required="" placeholder="" type="text" class="hs-input" inputmode="text" autocomplete="organization" value=""></div></div><div class="hs_website hs-website hs-fieldtype-text field hs-form-field smart-field"><label id="label-website-4a221e15-f640-4739-9fc4-56bc8f0d94a8_5162" class="" placeholder="Enter your URL de l'entreprise" for="website-4a221e15-f640-4739-9fc4-56bc8f0d94a8_5162"><span>URL de l'entreprise</span><span class="hs-form-required">*</span></label><legend class="hs-field-desc" style="display: none;"></legend><div class="input"><input id="website-4a221e15-f640-4739-9fc4-56bc8f0d94a8_5162" name="website" required="" placeholder="" type="text" class="hs-input" inputmode="url" value=""></div></div><div class="hs_phone hs-phone hs-fieldtype-phonenumber field hs-form-field smart-field"><label id="label-phone-4a221e15-f640-4739-9fc4-56bc8f0d94a8_5162" class="" placeholder="Enter your Téléphone" for="phone-4a221e15-f640-4739-9fc4-56bc8f0d94a8_5162"><span>Téléphone</span><span class="hs-form-required">*</span></label><legend class="hs-field-desc" style="display: none;"></legend><div class="input"><input id="phone-4a221e15-f640-4739-9fc4-56bc8f0d94a8_5162" name="phone" required="" placeholder="" type="tel" class="hs-input" inputmode="tel" autocomplete="tel" value=""></div></div></fieldset><fieldset class="form-columns-1"><div class="hs_employees__c hs-employees__c hs-fieldtype-select field hs-form-field smart-field"><label id="label-employees__c-4a221e15-f640-4739-9fc4-56bc8f0d94a8_5162" class="" placeholder="Enter your Nombre de salariés dans l'entreprise" for="employees__c-4a221e15-f640-4739-9fc4-56bc8f0d94a8_5162"><span>Nombre de salariés dans l'entreprise</span><span class="hs-form-required">*</span></label><legend class="hs-field-desc" style="display: none;"></legend><div class="input"><select id="employees__c-4a221e15-f640-4739-9fc4-56bc8f0d94a8_5162" required="" class="hs-input invalid error is-placeholder" name="employees__c"><option disabled="" value="">- Sélectionnez -</option><option value="1">1</option><option value="2 to 5">2 à 5</option><option value="6 to 10">6 à 10</option><option value="11 to 25">11 à 25</option><option value="26 to 50">26 à 50</option><option value="51 to 200">51 à 200</option><option value="201 to 1,000">201 à 1 000</option><option value="1,001 to 10,000">1 001 à 10 000</option><option value="10,001 or more">10 001 ou plus</option></select></div><ul class="no-list hs-error-msgs inputs-list" role="alert"><li><label class="hs-error-msg hs-main-font-element">Veuillez remplir ce champ obligatoire.</label></li></ul></div></fieldset><fieldset class="form-columns-1"><div class="hs_fr_marketing_blog_subscribe_check_box hs-fr_marketing_blog_subscribe_check_box hs-fieldtype-booleancheckbox field hs-form-field"><legend class="hs-field-desc" style="display: none;"></legend><div class="input"><ul class="inputs-list"><li class="hs-form-booleancheckbox"><label for="fr_marketing_blog_subscribe_check_box-4a221e15-f640-4739-9fc4-56bc8f0d94a8_5162" class="hs-form-booleancheckbox-display"><input id="fr_marketing_blog_subscribe_check_box-4a221e15-f640-4739-9fc4-56bc8f0d94a8_5162" class="hs-input" type="checkbox" name="fr_marketing_blog_subscribe_check_box" value="true"><span>Je souhaite m'abonner à la newsletter HubSpot</span></label></li></ul></div></div></fieldset><fieldset class="form-columns-1"><div class="hs_content_language hs-content_language hs-fieldtype-checkbox field hs-form-field" style="display: none;"><label id="label-content_language-4a221e15-f640-4739-9fc4-56bc8f0d94a8_5162" class="" placeholder="Enter your Content Language" for="content_language-4a221e15-f640-4739-9fc4-56bc8f0d94a8_5162"><span>Content Language</span></label><legend class="hs-field-desc" style="display: none;"></legend><div class="input"><input name="content_language" class="hs-input" type="hidden" value="French"></div></div></fieldset><fieldset class="form-columns-1"><div class="hs_gaclientid hs-gaclientid hs-fieldtype-text field hs-form-field" style="display: none;"><label id="label-gaclientid-4a221e15-f640-4739-9fc4-56bc8f0d94a8_5162" class="" placeholder="Enter your GACLIENTID" for="gaclientid-4a221e15-f640-4739-9fc4-56bc8f0d94a8_5162"><span>GACLIENTID</span></label><legend class="hs-field-desc" style="display: block;">Anonymously identifies a browser instance. This is a non-authenticated, cookie-based identifier created automatically by a Analytics-enabled site on a user’s first visit. Identifying users with Client ID is best suited for businesses focused on lead generation and new customers acquisition. Added to join our customer data to google data at the request of MOps on 12/19/18 (See BIZREQ-11194).</legend><div class="input"><input name="gaclientid" class="hs-input" type="hidden" value=""></div></div></fieldset><fieldset class="form-columns-1"><div class="hs_gatrackid hs-gatrackid hs-fieldtype-text field hs-form-field" style="display: none;"><label id="label-gatrackid-4a221e15-f640-4739-9fc4-56bc8f0d94a8_5162" class="" placeholder="Enter your GATRACKID" for="gatrackid-4a221e15-f640-4739-9fc4-56bc8f0d94a8_5162"><span>GATRACKID</span></label><legend class="hs-field-desc" style="display: block;">The google tracking ID. Added to join our customer data to google data at the request of MOps on 12/19/18 (See BIZREQ-11194).</legend><div class="input"><input name="gatrackid" class="hs-input" type="hidden" value=""></div></div></fieldset><fieldset class="form-columns-1"><div class="hs_hs_legal_basis hs-hs_legal_basis hs-fieldtype-text field hs-form-field" style="display: none;"><label id="label-hs_legal_basis-4a221e15-f640-4739-9fc4-56bc8f0d94a8_5162" class="" placeholder="Enter your Legal basis for processing contact's data" for="hs_legal_basis-4a221e15-f640-4739-9fc4-56bc8f0d94a8_5162"><span>Legal basis for processing contact's data</span></label><legend class="hs-field-desc" style="display: none;"></legend><div class="input"><input name="hs_legal_basis" class="hs-input" type="hidden" value=""></div></div></fieldset><fieldset class="form-columns-1"><div class="hs_gdpr_notice_custom_forms_ hs-gdpr_notice_custom_forms_ hs-fieldtype-text field hs-form-field" style="display: none;"><label id="label-gdpr_notice_custom_forms_-4a221e15-f640-4739-9fc4-56bc8f0d94a8_5162" class="" placeholder="Enter your GDPR Notice (Custom Forms)" for="gdpr_notice_custom_forms_-4a221e15-f640-4739-9fc4-56bc8f0d94a8_5162"><span>GDPR Notice (Custom Forms)</span></label><legend class="hs-field-desc" style="display: none;"></legend><div class="input"><input name="gdpr_notice_custom_forms_" class="hs-input" type="hidden" value=""></div></div></fieldset><fieldset class="form-columns-1"><div class="legal-consent-container"><div class="hs-richtext"><p>La protection des données nous tient à cœur. HubSpot utilise les informations que vous fournissez afin de vous proposer des informations et du contenu pertinent sur nos produits et services. Vous pouvez vous désinscrire de ce type de communications à tout moment. Pour plus d'informations, consultez notre <a href="https://legal.hubspot.com/fr/privacy-policy" rel=" noopener">politique de confidentialité</a>.</p></div></div></fieldset><div class="hs_submit hs-submit"><div class="hs-field-desc" style="display: none;"></div><div class="actions"><input type="submit" class="hs-button primary large" value="Télécharger"></div></div><input name="hs_context" type="hidden" value="{&quot;embedAtTimestamp&quot;:&quot;1712922410992&quot;,&quot;formDefinitionUpdatedAt&quot;:&quot;1693942164587&quot;,&quot;lang&quot;:&quot;fr&quot;,&quot;legalConsentOptions&quot;:&quot;{\&quot;legitimateInterestSubscriptionTypes\&quot;:[16,7818550,349169,1281077,121],\&quot;legitimateInterestLegalBasis\&quot;:\&quot;LEGITIMATE_INTEREST_PQL\&quot;,\&quot;processingConsentType\&quot;:\&quot;IMPLICIT\&quot;,\&quot;privacyPolicyText\&quot;:\&quot;<p>La protection des données nous tient à cœur. HubSpot utilise les informations que vous fournissez afin de vous proposer des informations et du contenu pertinent sur nos produits et services. Vous pouvez vous désinscrire de ce type de communications à tout moment. Pour plus d'informations, consultez notre <a href=\\\&quot;https://legal.hubspot.com/fr/privacy-policy\\\&quot; rel=\\\&quot; noopener\\\&quot;>politique de confidentialité</a>.</p>\&quot;,\&quot;isLegitimateInterest\&quot;:true}&quot;,&quot;userAgent&quot;:&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36&quot;,&quot;pageTitle&quot;:&quot;Modèle d'enquête de satisfaction client&quot;,&quot;pageUrl&quot;:&quot;https://offers.hubspot.fr/modele-enquete-satisfaction-client?hubs_post-cta=fr-blog-plain&amp;hubs_signup-url=blog.hubspot.fr%2Fwebsite%2Fbenchmark-ux&amp;hubs_signup-cta=mod%C3%A8le%20d%27enqu%C3%AAte%20de%20satisfaction%20&amp;hubs_post=blog.hubspot.fr%2Fwebsite%2Fbenchmark-ux&quot;,&quot;pageId&quot;:&quot;60451528591&quot;,&quot;referrer&quot;:&quot;https://blog.hubspot.fr/website/benchmark-ux&quot;,&quot;urlParams&quot;:{&quot;hubs_post-cta&quot;:&quot;fr-blog-plain&quot;,&quot;hubs_signup-url&quot;:&quot;blog.hubspot.fr/website/benchmark-ux&quot;,&quot;hubs_signup-cta&quot;:&quot;modèle d'enquête de satisfaction &quot;,&quot;hubs_post&quot;:&quot;blog.hubspot.fr/website/benchmark-ux&quot;},&quot;isHubSpotCmsGeneratedPage&quot;:true,&quot;formTarget&quot;:&quot;#hs_form_target_form_874064587&quot;,&quot;formInstanceId&quot;:&quot;5162&quot;,&quot;followUpEmailId&quot;:60451486832,&quot;followUpEmailCampaignId&quot;:186893002,&quot;contentType&quot;:&quot;landing-page&quot;,&quot;pageName&quot;:&quot;Modèle d'enquête de satisfaction client&quot;,&quot;rumScriptExecuteTime&quot;:805.1000000238419,&quot;rumTotalRequestTime&quot;:2057.199999988079,&quot;rumTotalRenderTime&quot;:2070.899999976158,&quot;rumServiceResponseTime&quot;:1252.0999999642372,&quot;rumFormRenderTime&quot;:13.699999988079071,&quot;connectionType&quot;:&quot;4g&quot;,&quot;firstContentfulPaint&quot;:0,&quot;largestContentfulPaint&quot;:0,&quot;locale&quot;:&quot;fr&quot;,&quot;timestamp&quot;:1712922391490,&quot;originalEmbedContext&quot;:{&quot;portalId&quot;:&quot;53&quot;,&quot;formId&quot;:&quot;4a221e15-f640-4739-9fc4-56bc8f0d94a8&quot;,&quot;region&quot;:&quot;na1&quot;,&quot;target&quot;:&quot;#hs_form_target_form_874064587&quot;,&quot;isBuilder&quot;:false,&quot;isTestPage&quot;:false,&quot;isPreview&quot;:false,&quot;formInstanceId&quot;:&quot;5162&quot;,&quot;formsBaseUrl&quot;:&quot;/_hcms/forms&quot;,&quot;css&quot;:&quot;&quot;,&quot;redirectUrl&quot;:&quot;https://offers.hubspot.fr/merci/modele-enquete-satisfaction-client?hubs_post-cta=fr-blog-plain&amp;hubs_signup-url=blog.hubspot.fr%2Fwebsite%2Fbenchmark-ux&amp;hubs_signup-cta=mod%C3%A8le%20d%27enqu%C3%AAte%20de%20satisfaction%20&amp;hubs_post=blog.hubspot.fr%2Fwebsite%2Fbenchmark-ux&amp;hubs_offer=offers.hubspot.fr/modele-enquete-satisfaction-client&quot;,&quot;isMobileResponsive&quot;:true,&quot;followUpEmailId&quot;:60451486832,&quot;followUpEmailCampaignId&quot;:186893002,&quot;pageName&quot;:&quot;Modèle d'enquête de satisfaction client&quot;,&quot;pageId&quot;:&quot;60451528591&quot;,&quot;contentType&quot;:&quot;landing-page&quot;,&quot;formData&quot;:{&quot;cssClass&quot;:&quot;hs-form stacked hs-custom-form&quot;},&quot;isCMSModuleEmbed&quot;:true},&quot;correlationId&quot;:&quot;18d837ac-8680-4839-a050-df89b3fe08df&quot;,&quot;renderedFieldsIds&quot;:[&quot;firstname&quot;,&quot;lastname&quot;,&quot;email&quot;,&quot;company&quot;,&quot;website&quot;,&quot;phone&quot;,&quot;employees__c&quot;,&quot;fr_marketing_blog_subscribe_check_box&quot;,&quot;content_language&quot;,&quot;gaclientid&quot;,&quot;gatrackid&quot;,&quot;hs_legal_basis&quot;,&quot;gdpr_notice_custom_forms_&quot;],&quot;captchaStatus&quot;:&quot;NOT_APPLICABLE&quot;,&quot;emailResubscribeStatus&quot;:&quot;NOT_APPLICABLE&quot;,&quot;isInsideCrossOriginFrame&quot;:false,&quot;source&quot;:&quot;forms-embed-1.5064&quot;,&quot;sourceName&quot;:&quot;forms-embed&quot;,&quot;sourceVersion&quot;:&quot;1.5064&quot;,&quot;sourceVersionMajor&quot;:&quot;1&quot;,&quot;sourceVersionMinor&quot;:&quot;5064&quot;,&quot;allPageIds&quot;:{&quot;embedContextPageId&quot;:&quot;60451528591&quot;,&quot;contentPageId&quot;:60451528591,&quot;contentAnalyticsPageId&quot;:&quot;60451528591&quot;},&quot;_debug_embedLogLines&quot;:[{&quot;clientTimestamp&quot;:1712922338799,&quot;level&quot;:&quot;INFO&quot;,&quot;message&quot;:&quot;Retrieved pageContext values which may be overriden by the embed context: {\&quot;pageTitle\&quot;:\&quot;Modèle d'enquête de satisfaction client\&quot;,\&quot;pageUrl\&quot;:\&quot;https://offers.hubspot.fr/modele-enquete-satisfaction-client?hubs_post-cta=fr-blog-plain&amp;hubs_signup-url=blog.hubspot.fr%2Fwebsite%2Fbenchmark-ux&amp;hubs_signup-cta=mod%C3%A8le%20d%27enqu%C3%AAte%20de%20satisfaction%20&amp;hubs_post=blog.hubspot.fr%2Fwebsite%2Fbenchmark-ux\&quot;,\&quot;referrer\&quot;:\&quot;https://blog.hubspot.fr/website/benchmark-ux\&quot;,\&quot;userAgent\&quot;:\&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36\&quot;,\&quot;urlParams\&quot;:{\&quot;hubs_post-cta\&quot;:\&quot;fr-blog-plain\&quot;,\&quot;hubs_signup-url\&quot;:\&quot;blog.hubspot.fr/website/benchmark-ux\&quot;,\&quot;hubs_signup-cta\&quot;:\&quot;modèle d'enquête de satisfaction \&quot;,\&quot;hubs_post\&quot;:\&quot;blog.hubspot.fr/website/benchmark-ux\&quot;},\&quot;pageId\&quot;:\&quot;60451528591\&quot;,\&quot;contentAnalyticsPageId\&quot;:\&quot;60451528591\&quot;,\&quot;contentPageId\&quot;:60451528591,\&quot;isHubSpotCmsGeneratedPage\&quot;:true}&quot;},{&quot;clientTimestamp&quot;:1712922338800,&quot;level&quot;:&quot;INFO&quot;,&quot;message&quot;:&quot;Retrieved countryCode property from normalized embed definition response: \&quot;FR\&quot;&quot;}]}"><iframe name="target_iframe_4a221e15-f640-4739-9fc4-56bc8f0d94a8_5162" style="display: none;"></iframe><input type="hidden" name="browser_language" value="fr"><input type="hidden" name="browser_country" value="fr"><input type="hidden" name="master_sales_phone_number" value="33 1 7273 0500"></form></div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			</span>
+					  
+				  </div>
+				</div>
+			  </div></div>
+	
+	
+		  <h1 class="p-4">
+			<i class="neon-red">The</i>
+			<i class="neon-blue">District</i>
+		  </h1>
+	<div class="register">
+			<h1>Enregistrez-vous</h1>
+			<form class="reg" action="register.php" method="post" autocomplete="off">
+				<label for="username">
+					<i class="fas fa-user"></i>
+				</label>
+				<input type="text" name="username" placeholder="Username" id="username" required>
+				<label for="password">
+					<i class="fas fa-lock"></i>
+				</label>
+				<input type="password" name="confirm_password" placeholder="confirm_Password" id="password" required>
+				<label for="confirm_password">
+					<i class="fas fa-lock"></i>
+				</label>
+				<input type="password" name="password" placeholder="Password" id="password" required>
+				<label for="email">
+					<i class="fas fa-envelope"></i>
+				</label>
+
+		
+				<input type="email" name="email" placeholder="Email" id="email" required>
+
+				<div class="rox m-3">
+				<input type="checkbox" name="conditions" required> J'ai lu et j'accepte les conditions générales d'utilisation de titre (trouver un nom) .<br/>
+				<input type="checkbox" name="newsletter" checked="checked" required> Je souhaite recevoir la newletter dans ma boite mail .
+			</div>
+				<input type="submit" value="Enregistrer">
+			</form>
+		</div>
+	
+		<!-- <div class="modal"><div id="cookie-consent" class="yellow position-absolute bottom-0 left-0 column-12 tablet:column-7 laptop:column-5 desktop:column-4 padding-lg" style="background: transparent; visibility: visible;"><div class="card header text-left padding-2xl with-border" style="--border-color: var(--fa-dk-yellow);"><h4><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="cookie-bite" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="padding-right-2xs svg-inline--fa fa-cookie-bite fa-xl"><path fill="currentColor" d="M257.5 27.6c-.8-5.4-4.9-9.8-10.3-10.6v0c-22.1-3.1-44.6 .9-64.4 11.4l-74 39.5C89.1 78.4 73.2 94.9 63.4 115L26.7 190.6c-9.8 20.1-13 42.9-9.1 64.9l14.5 82.8c3.9 22.1 14.6 42.3 30.7 57.9l60.3 58.4c16.1 15.6 36.6 25.6 58.7 28.7l83 11.7c22.1 3.1 44.6-.9 64.4-11.4l74-39.5c19.7-10.5 35.6-27 45.4-47.2l36.7-75.5c9.8-20.1 13-42.9 9.1-64.9v0c-.9-5.3-5.3-9.3-10.6-10.1c-51.5-8.2-92.8-47.1-104.5-97.4c-1.8-7.6-8-13.4-15.7-14.6c-54.6-8.7-97.7-52-106.2-106.8zM208 144a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM144 336a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm224-64a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" class=""></path></svg>
+			Cookie. Cookie. Cookie.
+		  </h4> <p>
+			We use cookies to make our site work better by storing limited information about your usage of the site.
+			<a href="https://github.com/FortAwesome/Security-Docs-and-Attestation/blob/main/Font_Awesome_Cookie_Info.md" target="_blank" class="blue">Read more here.</a></p> <div class="row padding-top-xs padding-bottom-xs"><div class="column"><button class="block flat clear with-border" style="--button-color: var(--fa-navy); border-color: var(--fa-navy);">
+				Necessary Only
+			  </button></div> <div class="column"><button class="block flat clear with-border" style="--button-color: var(--fa-navy); border-color: var(--fa-navy);">
+				Customize
+			  </button></div></div> <button class="block primary" style="--button-hover-background: var(--fa-dk-yellow);"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="cookie-bite" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="padding-right-2xs svg-inline--fa fa-cookie-bite fa-xl"><path fill="currentColor" d="M257.5 27.6c-.8-5.4-4.9-9.8-10.3-10.6v0c-22.1-3.1-44.6 .9-64.4 11.4l-74 39.5C89.1 78.4 73.2 94.9 63.4 115L26.7 190.6c-9.8 20.1-13 42.9-9.1 64.9l14.5 82.8c3.9 22.1 14.6 42.3 30.7 57.9l60.3 58.4c16.1 15.6 36.6 25.6 58.7 28.7l83 11.7c22.1 3.1 44.6-.9 64.4-11.4l74-39.5c19.7-10.5 35.6-27 45.4-47.2l36.7-75.5c9.8-20.1 13-42.9 9.1-64.9v0c-.9-5.3-5.3-9.3-10.6-10.1c-51.5-8.2-92.8-47.1-104.5-97.4c-1.8-7.6-8-13.4-15.7-14.6c-54.6-8.7-97.7-52-106.2-106.8zM208 144a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM144 336a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm224-64a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" class=""></path></svg>
+			Accept All Cookies
+		  </button></div></div></div> 
+		-->
+		
+	</main>
+
+	
+		<footer>
+
+
+		<p class="pull-right p-4 top-100"><a href="#">Revenir en haut ▲</a></p>
+		<div class="container-fluid  ">
+		  <div class="row">
+	  
+	  
+	  
+	  
+	  
+			<div class="col-md-3">
+			  <h3 class="h3">A propos</h3>
+			  <ul class="footer-list">
+				<li><a href="#">Historique</a></li>
+				<li><a href="#">Service clients</a></li>
+	  
+			  </ul>
+			</div>
+			<div class="col-md-3">
+			  <h3 class="h3">Partners</h3>
+			  <ul class="footer-list">
+	  
+				<li><a href="#">MIO</a></li>
+	  
+			  </ul>
+			</div>
+			<div class="col-md-3">
+			  <h3 class="h3">Service clents</h3>
+			  <ul class="footer-list">
+				<li><a href="#">Chat</a></li>
+				<li><a href="#">03 22 453 352</a></li>
+	  
+			  </ul>
+			</div>
+			<div class="col-md-3">
+			  <h3 class="h3">Socials</h3>
+			  <ul class="footer-list footer-list-inline">
+				<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+			  </ul>
+			</div>
+	  
+			<p class="droits m-4">@ 2017-2024 &middot;<a href="#">Tous droits &middot;</a><a href="#"> réservés</a></p>
+		  </div>
+	  
+	  </footer>
+	  
+	  
+	  
+	  
+	  </div>
+
+	  <script src="assets/js/toggle.js"></script>
+	  <script src="assets/js/script.js"></script>
+
+	</body>
+
+
+	</html>

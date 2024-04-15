@@ -1,10 +1,11 @@
 {
  
-    "php.version": "8.1.27",
+    "php.version": "8.1.26",
     
     "auto-rename-tag.activationOnLanguage": [
         
         "*"
     ],
-    "php.validate.executablePath": ""
+    "php.executablePath": "D:\\wamp64\\bin\\php\\php8.1.26\\php.exe\\",
+    "php.validate.executablePath": "",
 }

@@ -1,17 +1,19 @@
 <?php
 
+$Currentpage = basename($_SERVER['PHP_SELF']);
 
+if (!isset($_SESSION['loggedin'])) {
+	header('Location: ./login.php');
+	exit;
+}
+session_start();
 
 
 require_once('header.php');
 
 
 
-?>
-
-
-    
-    
+?>  
     
       <div class="parallax">
 
@@ -24,7 +26,9 @@ require_once('header.php');
             <i class="neon-blue">compte</i>
           </h1>
  
-      
+      		<div class="container d-inline-block position-relative pt-5 ">
+				<div class="vertical-text">Votre Texte Vertical</div>
+			</div>
             <div class="login">
               <h2>Login</h2>
               <form action="authenticate.php" method="post">
@@ -40,7 +44,7 @@ require_once('header.php');
              
             
               </form>
-              <div class="reg mx-auto d-flex justify-content-center align-items-center  ">
+              <div class="reg mx-auto d-flex vertical-align-baseline justify-content-center align-items-center  ">
               <h5 >Vous n'avez pas de compte :</h5>
          <h4><a href="register.html"> Inscrivez-vous </a></h4>
           </div>
